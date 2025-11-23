@@ -1,1 +1,585 @@
-function _0x35ef(){const _0x4c8971=['centerInfo','<option\x20value=\x22\x22>--\x20Select\x20Profile\x20--</option>','...','getElementById','toLowerCase','categories','div','display','Apel','⏰\x20Getting\x20slots\x20for\x20','1469142blJKVA','dates','egy','profileSelect','egy/en/prt','POST','change','textContent','POCA','head','button','applicantList','substring','urn','ipAddress','gender','calendars','207tlYqKY','isWeekend','stringify','✅\x20Profile\x20\x22','TOUR','✅\x20URN:\x20','block','route','fees','location','🎉\x20BOOKING\x20SUCCESS!','4108600qbQsrp','profileName','dateOfBirth','get','✅\x20Slot:\x20','</div>','json','setRequestHeader','log','logArea','Short\x20Term\x20(Medical)','createElement','forEach','Short\x20Term\x20(Business)','163614IkjDaZ','toLocaleTimeString','appendChild','404qJbUrC','URL','638156oyCNrP','contactNumber','vfs-toggle','parse','missionCode','allocationId','\x22\x20loaded','VFS\x20BOT','\x22\x20saved','73888DtEcYZ','message','❌\x20Profile\x20name\x20required','slots','option','onclick','profiles','getItem','scrollHeight','vfs_bot_','🚀\x20Starting\x20booking...','156.201.38.191','email','mainStatus','passportExpiry','✅\x20Complete!','Short\x20Term\x20(Tourism)','trim','toUpperCase','📤\x20Sending\x20applicant\x20to\x20','clientStatus','MED','lastName','EGY','countrySelect','https://lift-api.vfsglobal.com/appointment/calendar','visaCategory','clientsource','selectedCountry','innerHTML','keys','data','Netherlands','NO_SLOTS','https://lift-api.vfsglobal.com/appointment/timeslot','feesInfo','set','authStatus','nld','authorize','337000hlajRG','2cSXJzy','minimizeBtn','21660cRsSuK','156.201.103.142','passportNumber','body','centerCode','length','Short\x20Term\x20(Sports\x20Events)','value','vfs-panel','🚀\x20VFS\x20Bot\x20Starting...','20/11/2025','NLD-NCNC','startsWith','split','name','FFV','none','\x20dates','application/json','Portugal','style','egy/en/nld','sort','476JwxCBK','❌\x20Tokens\x20missing','authorization','clearBtn','BUS','No\x20URN','Short\x20Term\x20(Family\x20Visit)','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22font-size:\x2014px;\x20font-weight:\x20bold;\x20margin-bottom:\x2010px;\x20color:\x20#3498db;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VFS\x20APPOINTMENT\x20BOT\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22minimizeBtn\x22\x20style=\x22float:\x20right;\x20background:\x20#e74c3c;\x20border:\x20none;\x20color:\x20white;\x20padding:\x202px\x208px;\x20border-radius:\x203px;\x20cursor:\x20pointer;\x20font-size:\x2010px;\x22>MIN</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin:\x2015px\x200;\x20padding-bottom:\x2010px;\x20border-bottom:\x201px\x20solid\x20#34495e;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22font-size:\x2012px;\x20font-weight:\x20bold;\x20margin-bottom:\x2010px;\x20color:\x20#3498db;\x22>🌍\x20Select\x20Country</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22countrySelect\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22NLD\x22>🇳🇱\x20Netherlands</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22PRT\x22>🇵🇹\x20Portugal</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22countryInfo\x22\x20style=\x22padding:\x208px;\x20background:\x20#34495e;\x20border-radius:\x204px;\x20margin-top:\x208px;\x20font-size:\x2011px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>📍\x20Center:\x20<span\x20id=\x22centerInfo\x22>-</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>💰\x20Fees:\x20<span\x20id=\x22feesInfo\x22>-</span>\x20EGP</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin:\x2015px\x200;\x20padding-bottom:\x2010px;\x20border-bottom:\x201px\x20solid\x20#34495e;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22profileSelect\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22\x22>--\x20Select\x20Profile\x20--</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22profileName\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Profile\x20Name\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22firstName\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22First\x20Name\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22lastName\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Last\x20Name\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22email\x22\x20id=\x22email\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Email\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22contactNumber\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Phone\x20(without\x200)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22passportNumber\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Passport\x20Number\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22date\x22\x20id=\x22dateOfBirth\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22date\x22\x20id=\x22passportExpiry\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22gender\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22\x22>Gender</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x220\x22>Male</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x221\x22>Female</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22visaCategory\x22\x20class=\x22vfs-input\x22></select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22saveProfile\x22\x20class=\x22vfs-btn\x20btn-secondary\x22>💾\x20Save\x20Profile</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22margin:\x2015px\x200;\x20padding-bottom:\x2010px;\x20border-bottom:\x201px\x20solid\x20#34495e;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22font-size:\x2012px;\x20font-weight:\x20bold;\x20margin-bottom:\x2010px;\x20color:\x20#3498db;\x22>📅\x20Booking\x20Preferences</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22dateStrategy\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22first\x22>📅\x20First\x20Available\x20Date</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22latest\x22>📅\x20Latest\x20Date</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22random\x22>🎲\x20Random\x20Date</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22slotStrategy\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22first\x22>⏰\x20First\x20Available\x20Slot</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22latest\x22>⏰\x20Latest\x20Slot</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22random\x22>🎲\x20Random\x20Slot</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22padding:\x208px;\x20background:\x20#34495e;\x20border-radius:\x204px;\x20margin:\x2010px\x200;\x20font-size:\x2011px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>Auth:\x20<span\x20id=\x22authStatus\x22>❌</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>Client:\x20<span\x20id=\x22clientStatus\x22>❌</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>Status:\x20<span\x20id=\x22mainStatus\x22>Ready</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22startBtn\x22\x20class=\x22vfs-btn\x20btn-primary\x22>🚀\x20Start\x20Booking</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22clearBtn\x22\x20class=\x22vfs-btn\x20btn-danger\x22>🗑️\x20Clear\x20Data</button>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22vfs-log\x22\x20id=\x22logArea\x22>Bot\x20ready...</div>\x0a\x20\x20\x20\x20','firstName','startBtn','includes','then','\x20captured','prototype','1740kQWgfF','EGP','https://lift-api.vfsglobal.com/appointment/schedule','country','📅\x20Scheduling...','CSE','setItem'];_0x35ef=function(){return _0x4c8971;};return _0x35ef();}function _0xf565(_0x583e6b,_0x58daef){const _0x35efb4=_0x35ef();return _0xf565=function(_0xf5655f,_0x4f5aa6){_0xf5655f=_0xf5655f-0xa4;let _0x22ca4a=_0x35efb4[_0xf5655f];return _0x22ca4a;},_0xf565(_0x583e6b,_0x58daef);}(function(_0x3df85d,_0x398b8d){const _0x26aaa0=_0xf565,_0x201b54=_0x3df85d();while(!![]){try{const _0x444b15=parseInt(_0x26aaa0(0xc8))/0x1*(parseInt(_0x26aaa0(0xfa))/0x2)+-parseInt(_0x26aaa0(0xfc))/0x3*(-parseInt(_0x26aaa0(0xc6))/0x4)+parseInt(_0x26aaa0(0xb5))/0x5+parseInt(_0x26aaa0(0x132))/0x6+parseInt(_0x26aaa0(0x113))/0x7*(-parseInt(_0x26aaa0(0xd1))/0x8)+-parseInt(_0x26aaa0(0xaa))/0x9*(-parseInt(_0x26aaa0(0xf9))/0xa)+-parseInt(_0x26aaa0(0xc3))/0xb*(parseInt(_0x26aaa0(0x121))/0xc);if(_0x444b15===_0x398b8d)break;else _0x201b54['push'](_0x201b54['shift']());}catch(_0x5d1cfa){_0x201b54['push'](_0x201b54['shift']());}}}(_0x35ef,0x67953),(function(){'use strict';const _0xe0397b=_0xf565;console[_0xe0397b(0xbd)](_0xe0397b(0x105));const _0x248fd0={'NLD':{'name':_0xe0397b(0xf1),'missionCode':_0xe0397b(0xf7),'centerCode':_0xe0397b(0x107),'route':_0xe0397b(0x111),'ipAddress':_0xe0397b(0xdc),'fees':0x4f6,'categories':[{'code':_0xe0397b(0x117),'name':'Business'},{'code':_0xe0397b(0xae),'name':'Tourism'}]},'PRT':{'name':_0xe0397b(0x10f),'missionCode':'prt','centerCode':_0xe0397b(0x13a),'route':_0xe0397b(0x136),'ipAddress':_0xe0397b(0xfd),'fees':0x866,'categories':[{'code':_0xe0397b(0x130),'name':'Appeal'},{'code':'JB','name':'National\x20(Job\x20Seeker)'},{'code':'LT','name':'National\x20(Long\x20Term)'},{'code':_0xe0397b(0x117),'name':_0xe0397b(0xc2)},{'code':_0xe0397b(0x126),'name':_0xe0397b(0x102)},{'code':_0xe0397b(0x10b),'name':_0xe0397b(0x119)},{'code':_0xe0397b(0xe6),'name':_0xe0397b(0xbf)},{'code':'TOU','name':_0xe0397b(0xe1)}]}},_0x31de19={'get':(_0x5d66e1,_0x575fcf)=>{const _0x30a508=_0xe0397b,_0xbf3c26=localStorage[_0x30a508(0xd8)](_0x30a508(0xda)+_0x5d66e1);return _0xbf3c26?JSON[_0x30a508(0xcb)](_0xbf3c26):_0x575fcf;},'set':(_0x20cf0c,_0x1c5773)=>{const _0x4cd473=_0xe0397b;localStorage[_0x4cd473(0x127)]('vfs_bot_'+_0x20cf0c,JSON[_0x4cd473(0xac)](_0x1c5773));}};let _0x17dfd9={'authorize':_0x31de19[_0xe0397b(0xb8)](_0xe0397b(0xf8),''),'clientsource':_0x31de19[_0xe0397b(0xb8)](_0xe0397b(0xec),'')};const _0x355c90='\x0a\x20\x20\x20\x20\x20\x20\x20\x20#vfs-panel\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2060px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2020px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20320px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#2c3e50\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ecf0f1\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20sans-serif\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x204px\x2012px\x20rgba(0,0,0,0.3)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483647\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x2085vh\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#vfs-toggle\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2020px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#3498db\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x208px\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483647\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.vfs-input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x205px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#34495e;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#34495e;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ecf0f1;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.vfs-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x208px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2013px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btn-primary\x20{\x20background:\x20#27ae60;\x20color:\x20white;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btn-secondary\x20{\x20background:\x20#3498db;\x20color:\x20white;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btn-danger\x20{\x20background:\x20#e74c3c;\x20color:\x20white;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.vfs-log\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#1a1a1a;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20monospace;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#0f0;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20',_0xfe7ea3=document[_0xe0397b(0xc0)](_0xe0397b(0x110));_0xfe7ea3[_0xe0397b(0x139)]=_0x355c90,document[_0xe0397b(0x13b)][_0xe0397b(0xc5)](_0xfe7ea3);const _0x2342c1=document['createElement'](_0xe0397b(0x13c));_0x2342c1['id']=_0xe0397b(0xca),_0x2342c1[_0xe0397b(0xee)]=_0xe0397b(0xcf),_0x2342c1[_0xe0397b(0xd6)]=()=>{const _0x33ec0e=_0xe0397b,_0x528517=document[_0x33ec0e(0x12b)](_0x33ec0e(0x104));_0x528517[_0x33ec0e(0x110)][_0x33ec0e(0x12f)]=_0x528517[_0x33ec0e(0x110)]['display']===_0x33ec0e(0x10c)?_0x33ec0e(0xb0):_0x33ec0e(0x10c);},document[_0xe0397b(0xff)][_0xe0397b(0xc5)](_0x2342c1);const _0x4bd986=document[_0xe0397b(0xc0)](_0xe0397b(0x12e));_0x4bd986['id']=_0xe0397b(0x104),_0x4bd986[_0xe0397b(0x110)][_0xe0397b(0x12f)]=_0xe0397b(0xb0),_0x4bd986[_0xe0397b(0xee)]=_0xe0397b(0x11a),document[_0xe0397b(0xff)]['appendChild'](_0x4bd986);const _0x58a68f=document[_0xe0397b(0x12b)](_0xe0397b(0xbe)),_0x169823=document[_0xe0397b(0x12b)](_0xe0397b(0xf6)),_0xe95a7b=document[_0xe0397b(0x12b)](_0xe0397b(0xe5)),_0x2509cd=document['getElementById'](_0xe0397b(0xde)),_0x511568=document[_0xe0397b(0x12b)](_0xe0397b(0x135)),_0x57fd1e=document[_0xe0397b(0x12b)]('visaCategory'),_0x240a90=document[_0xe0397b(0x12b)](_0xe0397b(0xe9)),_0x380891=document[_0xe0397b(0x12b)](_0xe0397b(0x128)),_0x3c0064=document[_0xe0397b(0x12b)](_0xe0397b(0xf4));_0x240a90['value']=_0x31de19[_0xe0397b(0xb8)](_0xe0397b(0xed),'NLD');function _0xc9a654(){const _0x14ac6d=_0xe0397b,_0x5174d3=_0x248fd0[_0x240a90['value']];_0x380891['textContent']=_0x5174d3[_0x14ac6d(0x100)],_0x3c0064[_0x14ac6d(0x139)]=_0x5174d3[_0x14ac6d(0xb2)],_0x57fd1e[_0x14ac6d(0xee)]='',_0x5174d3[_0x14ac6d(0x12d)]['forEach'](_0x914215=>{const _0x56db46=_0x14ac6d,_0x3f2b76=document['createElement'](_0x56db46(0xd5));_0x3f2b76['value']=_0x914215['code'],_0x3f2b76[_0x56db46(0x139)]=_0x914215[_0x56db46(0x10a)],_0x57fd1e[_0x56db46(0xc5)](_0x3f2b76);}),_0x5dc5e3('🌍\x20Country:\x20'+_0x5174d3[_0x14ac6d(0x10a)]);}function _0x5dc5e3(_0x4f9055){const _0x5e1edb=_0xe0397b,_0x4e9041=new Date()[_0x5e1edb(0xc4)]();_0x58a68f['innerHTML']+='<div>['+_0x4e9041+']\x20'+_0x4f9055+_0x5e1edb(0xba),_0x58a68f['scrollTop']=_0x58a68f[_0x5e1edb(0xd9)];}function _0x4a2418(){const _0x1c5999=_0xe0397b;_0x169823[_0x1c5999(0x139)]=_0x17dfd9[_0x1c5999(0xf8)]?'✅':'❌',_0xe95a7b[_0x1c5999(0x139)]=_0x17dfd9['clientsource']?'✅':'❌';}function _0xb6c180(_0xc7a7a9,_0x5528b9){const _0x222eff=_0xe0397b;_0x5528b9&&_0x5528b9!==_0x17dfd9[_0xc7a7a9]&&(_0x17dfd9[_0xc7a7a9]=_0x5528b9,_0x31de19['set'](_0xc7a7a9,_0x5528b9),_0x5dc5e3(_0xc7a7a9+_0x222eff(0x11f)),_0x4a2418());}const _0x1d0d11=XMLHttpRequest[_0xe0397b(0x120)]['setRequestHeader'];XMLHttpRequest[_0xe0397b(0x120)][_0xe0397b(0xbc)]=function(_0x58396e,_0x13280d){const _0x24f808=_0xe0397b;return(_0x58396e[_0x24f808(0x12c)]()===_0x24f808(0xf8)||_0x58396e[_0x24f808(0x12c)]()===_0x24f808(0x115))&&_0xb6c180('authorize',_0x13280d),_0x58396e[_0x24f808(0x12c)]()===_0x24f808(0xec)&&_0xb6c180(_0x24f808(0xec),_0x13280d),_0x1d0d11['apply'](this,arguments);};function _0x4c5d0c(){const _0x5c5240=_0xe0397b,_0x5c3825=JSON[_0x5c5240(0xcb)](_0x31de19[_0x5c5240(0xb8)](_0x5c5240(0xd7),'{}'));_0x511568['innerHTML']=_0x5c5240(0x129),Object[_0x5c5240(0xef)](_0x5c3825)[_0x5c5240(0xc1)](_0x377ca5=>{const _0xc974bf=_0x5c5240,_0x13beba=document[_0xc974bf(0xc0)]('option');_0x13beba[_0xc974bf(0x103)]=_0x377ca5,_0x13beba[_0xc974bf(0x139)]=_0x377ca5,_0x511568[_0xc974bf(0xc5)](_0x13beba);});}function _0x4c6501(){const _0x3776bf=_0xe0397b,_0x87f5c8=document['getElementById'](_0x3776bf(0xb6))['value'][_0x3776bf(0xe2)]();if(!_0x87f5c8){_0x5dc5e3(_0x3776bf(0xd3));return;}const _0x23c3af={'firstName':document['getElementById'](_0x3776bf(0x11b))[_0x3776bf(0x103)],'lastName':document['getElementById'](_0x3776bf(0xe7))[_0x3776bf(0x103)],'email':document['getElementById'](_0x3776bf(0xdd))['value'],'contactNumber':document[_0x3776bf(0x12b)](_0x3776bf(0xc9))[_0x3776bf(0x103)],'passportNumber':document[_0x3776bf(0x12b)](_0x3776bf(0xfe))[_0x3776bf(0x103)],'dateOfBirth':document[_0x3776bf(0x12b)](_0x3776bf(0xb7))[_0x3776bf(0x103)],'passportExpiry':document[_0x3776bf(0x12b)](_0x3776bf(0xdf))['value'],'gender':document['getElementById'](_0x3776bf(0xa8))['value'],'visaCategory':document[_0x3776bf(0x12b)](_0x3776bf(0xeb))[_0x3776bf(0x103)],'country':_0x240a90['value']},_0x4aa8cd=JSON[_0x3776bf(0xcb)](_0x31de19[_0x3776bf(0xb8)](_0x3776bf(0xd7),'{}'));_0x4aa8cd[_0x87f5c8]=_0x23c3af,_0x31de19[_0x3776bf(0xf5)](_0x3776bf(0xd7),JSON[_0x3776bf(0xac)](_0x4aa8cd)),_0x5dc5e3(_0x3776bf(0xad)+_0x87f5c8+_0x3776bf(0xd0)),_0x4c5d0c();}function _0x22903a(){const _0x29bc2e=_0xe0397b,_0x2c4ecc=_0x511568['value'];if(!_0x2c4ecc)return;const _0x834cc5=JSON[_0x29bc2e(0xcb)](_0x31de19['get'](_0x29bc2e(0xd7),'{}')),_0x6017c4=_0x834cc5[_0x2c4ecc];_0x6017c4&&(Object[_0x29bc2e(0xef)](_0x6017c4)[_0x29bc2e(0xc1)](_0x42899a=>{const _0x3c3ce4=_0x29bc2e,_0x267f9a=document[_0x3c3ce4(0x12b)](_0x42899a);if(_0x267f9a)_0x267f9a[_0x3c3ce4(0x103)]=_0x6017c4[_0x42899a]||'';}),_0x6017c4[_0x29bc2e(0x124)]&&(_0x240a90['value']=_0x6017c4[_0x29bc2e(0x124)],_0xc9a654()),_0x5dc5e3(_0x29bc2e(0xad)+_0x2c4ecc+_0x29bc2e(0xce)));}function _0x1a6df8(_0x555027){const _0x3603fa=_0xe0397b;if(!_0x555027)return null;if(_0x555027[_0x3603fa(0x11d)]('-')){let [_0x5c9b16,_0x210885,_0x131ed2]=_0x555027[_0x3603fa(0x109)]('-');return _0x131ed2+'/'+_0x210885+'/'+_0x5c9b16;}return _0x555027;}function _0x56d8a6(){const _0x3ffee4=_0xe0397b;return _0x248fd0[_0x240a90[_0x3ffee4(0x103)]];}function _0x41daa3(_0x118f06){const _0x1f6a30=_0xe0397b,_0x4bbe57=_0x56d8a6();_0x5dc5e3(_0x1f6a30(0xe4)+_0x4bbe57[_0x1f6a30(0x10a)]+_0x1f6a30(0x12a));let _0x138f8f=_0x118f06[_0x1f6a30(0xc9)];if(_0x138f8f[_0x1f6a30(0x108)]('0'))_0x138f8f=_0x138f8f[_0x1f6a30(0xa5)](0x1);const _0x270898={'countryCode':_0x1f6a30(0x134),'missionCode':_0x4bbe57[_0x1f6a30(0xcc)],'centerCode':_0x4bbe57['centerCode'],'loginUser':_0x118f06[_0x1f6a30(0xdd)],'visaCategoryCode':_0x118f06[_0x1f6a30(0xeb)],'isEdit':![],'applicantList':[{'loginUser':_0x118f06[_0x1f6a30(0xdd)],'firstName':_0x118f06[_0x1f6a30(0x11b)]['toUpperCase'](),'lastName':_0x118f06[_0x1f6a30(0xe7)][_0x1f6a30(0xe3)](),'gender':parseInt(_0x118f06[_0x1f6a30(0xa8)])||0x1,'contactNumber':_0x138f8f,'dialCode':'02','passportNumber':_0x118f06[_0x1f6a30(0xfe)][_0x1f6a30(0xe3)](),'passportExpirtyDate':_0x1a6df8(_0x118f06[_0x1f6a30(0xdf)]),'dateOfBirth':_0x1a6df8(_0x118f06[_0x1f6a30(0xb7)]),'emailId':_0x118f06[_0x1f6a30(0xdd)],'nationalityCode':_0x1f6a30(0xe8),'ipAddress':_0x4bbe57[_0x1f6a30(0xa7)],'isAutoRefresh':!![]}]};return fetch('https://lift-api.vfsglobal.com/appointment/applicants',{'method':_0x1f6a30(0x137),'headers':{'accept':_0x1f6a30(0x10e),'content-type':'application/json','authorize':_0x17dfd9[_0x1f6a30(0xf8)],'clientsource':_0x17dfd9[_0x1f6a30(0xec)],'route':_0x4bbe57[_0x1f6a30(0xb1)]},'body':JSON[_0x1f6a30(0xac)](_0x270898)})[_0x1f6a30(0x11e)](_0x2ddd77=>_0x2ddd77[_0x1f6a30(0xbb)]())[_0x1f6a30(0x11e)](_0x47d142=>{const _0x16afa2=_0x1f6a30,_0x1c247f=_0x47d142['urn']||_0x47d142['data']&&_0x47d142[_0x16afa2(0xf0)][_0x16afa2(0xa6)]||_0x47d142[_0x16afa2(0xa4)]&&_0x47d142[_0x16afa2(0xa4)][0x0]&&_0x47d142[_0x16afa2(0xa4)][0x0]['urn'];if(_0x1c247f)return _0x5dc5e3(_0x16afa2(0xaf)+_0x1c247f),{'success':!![],'urn':_0x1c247f};throw new Error(_0x16afa2(0x118));});}function _0x342011(_0x5a4923,_0x4c6e33,_0x54ce2d){const _0x390cb8=_0xe0397b,_0x17fc9c=_0x56d8a6();return _0x5dc5e3('📅\x20Getting\x20calendar...'),fetch(_0x390cb8(0xea),{'method':_0x390cb8(0x137),'headers':{'content-type':'application/json','authorize':_0x17dfd9['authorize'],'clientsource':_0x17dfd9[_0x390cb8(0xec)],'route':_0x17fc9c['route']},'body':JSON['stringify']({'countryCode':_0x390cb8(0x134),'missionCode':_0x17fc9c['missionCode'],'centerCode':_0x17fc9c[_0x390cb8(0x100)],'loginUser':_0x4c6e33,'fromDate':_0x390cb8(0x106),'urn':_0x5a4923,'visaCategoryCode':_0x54ce2d})})[_0x390cb8(0x11e)](_0x17f45c=>_0x17f45c[_0x390cb8(0xbb)]())[_0x390cb8(0x11e)](_0x76af5e=>{const _0x5bbae3=_0x390cb8,_0x3c3bf6=_0x76af5e[_0x5bbae3(0xa9)]['filter'](_0x3a0fb2=>!_0x3a0fb2[_0x5bbae3(0xab)])['map'](_0x3b9581=>_0x3b9581['date'])[_0x5bbae3(0x112)]();if(_0x3c3bf6['length'])return _0x5dc5e3('✅\x20Found\x20'+_0x3c3bf6[_0x5bbae3(0x101)]+_0x5bbae3(0x10d)),{'dates':_0x3c3bf6,'visaCategory':_0x54ce2d};throw new Error('NO_DATES');});}function _0x503969(_0x3f98d4,_0x5eab73,_0x53fdf1,_0x8525cc){const _0x5d100c=_0xe0397b,_0x3d2f22=_0x56d8a6();return _0x5dc5e3(_0x5d100c(0x131)+_0x5eab73+_0x5d100c(0x12a)),fetch(_0x5d100c(0xf3),{'method':_0x5d100c(0x137),'headers':{'content-type':_0x5d100c(0x10e),'authorize':_0x17dfd9[_0x5d100c(0xf8)],'clientsource':_0x17dfd9[_0x5d100c(0xec)],'route':_0x3d2f22[_0x5d100c(0xb1)]},'body':JSON[_0x5d100c(0xac)]({'countryCode':_0x5d100c(0x134),'missionCode':_0x3d2f22[_0x5d100c(0xcc)],'centerCode':_0x3d2f22[_0x5d100c(0x100)],'loginUser':_0x53fdf1,'slotDate':_0x5eab73,'urn':_0x3f98d4,'visaCategoryCode':_0x8525cc})})['then'](_0x289290=>_0x289290[_0x5d100c(0xbb)]())[_0x5d100c(0x11e)](_0x380905=>{const _0xb055dc=_0x5d100c;if(_0x380905['slots']&&_0x380905[_0xb055dc(0xd4)][_0xb055dc(0x101)]>0x0){const _0x155b45=_0x380905[_0xb055dc(0xd4)][0x0];return _0x5dc5e3(_0xb055dc(0xb9)+_0x155b45['slot']),{'slot':_0x155b45,'id':_0x155b45[_0xb055dc(0xcd)],'date':_0x5eab73};}throw new Error(_0xb055dc(0xf2));});}function _0x226770(_0x42ff94,_0x1d25c0,_0x5c3209){const _0x4c1a15=_0xe0397b,_0x337684=_0x56d8a6();return _0x5dc5e3(_0x4c1a15(0x125)),fetch(_0x4c1a15(0x123),{'method':'POST','headers':{'content-type':'application/json','authorize':_0x17dfd9[_0x4c1a15(0xf8)],'clientsource':_0x17dfd9[_0x4c1a15(0xec)],'route':_0x337684[_0x4c1a15(0xb1)]},'body':JSON[_0x4c1a15(0xac)]({'missionCode':_0x337684[_0x4c1a15(0xcc)],'countryCode':_0x4c1a15(0x134),'centerCode':_0x337684['centerCode'],'loginUser':_0x5c3209,'urn':_0x42ff94,'paymentdetails':{'paymentmode':'Online','amount':_0x337684[_0x4c1a15(0xb2)],'currency':_0x4c1a15(0x122)},'allocationId':_0x1d25c0,'CanVFSReachoutToApplicant':!![],'TnCConsentAndAcceptance':!![]})})[_0x4c1a15(0x11e)](_0x466730=>_0x466730[_0x4c1a15(0xbb)]())[_0x4c1a15(0x11e)](_0x2fdac2=>{const _0x3a6f1d=_0x4c1a15;_0x5dc5e3(_0x3a6f1d(0xb4)),_0x2fdac2[_0x3a6f1d(0xc7)]&&(window[_0x3a6f1d(0xb3)]['href']=_0x2fdac2[_0x3a6f1d(0xc7)]);});}function _0x5891f1(){const _0x1f93b3=_0xe0397b;if(!_0x511568['value']){_0x5dc5e3('❌\x20Select\x20a\x20profile\x20first');return;}if(!_0x17dfd9[_0x1f93b3(0xf8)]||!_0x17dfd9['clientsource']){_0x5dc5e3(_0x1f93b3(0x114));return;}_0x2509cd['textContent']='🔄\x20Running...',_0x5dc5e3(_0x1f93b3(0xdb));const _0x80d8d2={'firstName':document[_0x1f93b3(0x12b)]('firstName')[_0x1f93b3(0x103)],'lastName':document[_0x1f93b3(0x12b)](_0x1f93b3(0xe7))['value'],'email':document['getElementById']('email')[_0x1f93b3(0x103)],'contactNumber':document['getElementById']('contactNumber')[_0x1f93b3(0x103)],'passportNumber':document['getElementById'](_0x1f93b3(0xfe))[_0x1f93b3(0x103)],'dateOfBirth':document[_0x1f93b3(0x12b)](_0x1f93b3(0xb7))['value'],'passportExpiry':document['getElementById'](_0x1f93b3(0xdf))[_0x1f93b3(0x103)],'gender':document['getElementById'](_0x1f93b3(0xa8))[_0x1f93b3(0x103)],'visaCategory':document[_0x1f93b3(0x12b)]('visaCategory')[_0x1f93b3(0x103)]};let _0x30350b,_0x1181ac;_0x41daa3(_0x80d8d2)[_0x1f93b3(0x11e)](_0xe1f189=>{const _0x425821=_0x1f93b3;return _0x30350b=_0xe1f189[_0x425821(0xa6)],_0x342011(_0x30350b,_0x80d8d2[_0x425821(0xdd)],_0x80d8d2[_0x425821(0xeb)]);})[_0x1f93b3(0x11e)](_0x244023=>{const _0x485701=_0x1f93b3,_0x488290=_0x244023[_0x485701(0x133)][0x0];return _0x503969(_0x30350b,_0x488290,_0x80d8d2['email'],_0x244023[_0x485701(0xeb)]);})[_0x1f93b3(0x11e)](_0xbff1b5=>{const _0x19e17e=_0x1f93b3;return _0x1181ac=_0xbff1b5['id'],_0x226770(_0x30350b,_0x1181ac,_0x80d8d2[_0x19e17e(0xdd)]);})[_0x1f93b3(0x11e)](()=>{const _0x59e4e0=_0x1f93b3;_0x2509cd['textContent']=_0x59e4e0(0xe0);})['catch'](_0x89aca8=>{const _0xbcd081=_0x1f93b3;_0x2509cd[_0xbcd081(0x139)]='❌\x20Error',_0x5dc5e3('❌\x20'+_0x89aca8[_0xbcd081(0xd2)]);});}document[_0xe0397b(0x12b)](_0xe0397b(0xfb))[_0xe0397b(0xd6)]=()=>{const _0x572bfb=_0xe0397b;_0x4bd986[_0x572bfb(0x110)][_0x572bfb(0x12f)]='none';},_0x240a90['addEventListener'](_0xe0397b(0x138),function(){const _0x2342d7=_0xe0397b;_0x31de19[_0x2342d7(0xf5)]('selectedCountry',this[_0x2342d7(0x103)]),_0xc9a654();}),_0x511568['onchange']=_0x22903a,document[_0xe0397b(0x12b)]('saveProfile')[_0xe0397b(0xd6)]=_0x4c6501,document[_0xe0397b(0x12b)](_0xe0397b(0x11c))['onclick']=_0x5891f1,document[_0xe0397b(0x12b)](_0xe0397b(0x116))[_0xe0397b(0xd6)]=()=>{const _0x4f140d=_0xe0397b;_0x31de19['set'](_0x4f140d(0xd7),'{}'),_0x4c5d0c(),_0x58a68f[_0x4f140d(0xee)]='',_0x5dc5e3('🗑️\x20Data\x20cleared');},_0x4a2418(),_0x4c5d0c(),_0xc9a654(),_0x5dc5e3('✅\x20VFS\x20Bot\x20loaded!');}()));
+// ═══════════════════════════════════════════════════════════
+// VFS APPOINTMENT BOT - Main Script (vfs-bot.js)
+// ═══════════════════════════════════════════════════════════
+
+(function () {
+    'use strict';
+
+    console.log('🚀 VFS Bot Starting...');
+
+    // Country configurations
+    const COUNTRIES = {
+        NLD: {
+            name: "Netherlands",
+            missionCode: "nld",
+            centerCode: "NLD-NCNC",
+            route: "egy/en/nld",
+            ipAddress: "156.201.38.191",
+            fees: 1270,
+            categories: [
+                { code: "BUS", name: "Business" },
+                { code: "TOUR", name: "Tourism" }
+            ]
+        },
+        PRT: {
+            name: "Portugal",
+            missionCode: "prt",
+            centerCode: "POCA",
+            route: "egy/en/prt",
+            ipAddress: "156.201.103.142",
+            fees: 2150,
+            categories: [
+                { code: "Apel", name: "Appeal" },
+                { code: "JB", name: "National (Job Seeker)" },
+                { code: "LT", name: "National (Long Term)" },
+                { code: "BUS", name: "Short Term (Business)" },
+                { code: "CSE", name: "Short Term (Sports Events)" },
+                { code: "FFV", name: "Short Term (Family Visit)" },
+                { code: "MED", name: "Short Term (Medical)" },
+                { code: "TOU", name: "Short Term (Tourism)" }
+            ]
+        }
+    };
+
+    // Storage helper
+    const Storage = {
+        get: (key, defaultValue) => {
+            const value = localStorage.getItem(`vfs_bot_${key}`);
+            return value ? JSON.parse(value) : defaultValue;
+        },
+        set: (key, value) => {
+            localStorage.setItem(`vfs_bot_${key}`, JSON.stringify(value));
+        }
+    };
+
+    // Captured tokens
+    let capturedData = {
+        authorize: Storage.get("authorize", ""),
+        clientsource: Storage.get("clientsource", "")
+    };
+
+    // Simple styles
+    const styles = `
+        #vfs-panel {
+            position: fixed !important;
+            top: 60px !important;
+            left: 20px !important;
+            width: 320px !important;
+            background: #2c3e50 !important;
+            color: #ecf0f1 !important;
+            border-radius: 8px !important;
+            padding: 15px !important;
+            font-family: Arial, sans-serif !important;
+            font-size: 12px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+            z-index: 2147483647 !important;
+            max-height: 85vh !important;
+            overflow-y: auto !important;
+        }
+        #vfs-toggle {
+            position: fixed !important;
+            top: 10px !important;
+            left: 20px !important;
+            background: #3498db !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 5px !important;
+            padding: 8px 15px !important;
+            cursor: pointer !important;
+            z-index: 2147483647 !important;
+            font-weight: bold !important;
+        }
+        .vfs-input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #34495e;
+            border-radius: 4px;
+            background: #34495e;
+            color: #ecf0f1;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+        .vfs-btn {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-secondary { background: #3498db; color: white; }
+        .btn-danger { background: #e74c3c; color: white; }
+        .vfs-log {
+            background: #1a1a1a;
+            border-radius: 4px;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 10px;
+            margin-top: 10px;
+            color: #0f0;
+        }
+    `;
+
+    const styleEl = document.createElement('style');
+    styleEl.textContent = styles;
+    document.head.appendChild(styleEl);
+
+    // Toggle button
+    const toggleBtn = document.createElement("button");
+    toggleBtn.id = "vfs-toggle";
+    toggleBtn.innerHTML = 'VFS BOT';
+    toggleBtn.onclick = () => {
+        const panel = document.getElementById('vfs-panel');
+        panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    };
+    document.body.appendChild(toggleBtn);
+
+    // Main panel
+    const panel = document.createElement("div");
+    panel.id = "vfs-panel";
+    panel.style.display = "block";
+    panel.innerHTML = `
+        <div style="font-size: 14px; font-weight: bold; margin-bottom: 10px; color: #3498db;">
+            VFS APPOINTMENT BOT
+            <button id="minimizeBtn" style="float: right; background: #e74c3c; border: none; color: white; padding: 2px 8px; border-radius: 3px; cursor: pointer; font-size: 10px;">MIN</button>
+        </div>
+
+        <div style="margin: 15px 0; padding-bottom: 10px; border-bottom: 1px solid #34495e;">
+            <div style="font-size: 12px; font-weight: bold; margin-bottom: 10px; color: #3498db;">🌍 Select Country</div>
+            <select id="countrySelect" class="vfs-input">
+                <option value="NLD">🇳🇱 Netherlands</option>
+                <option value="PRT">🇵🇹 Portugal</option>
+            </select>
+            <div id="countryInfo" style="padding: 8px; background: #34495e; border-radius: 4px; margin-top: 8px; font-size: 11px;">
+                <div>📍 Center: <span id="centerInfo">-</span></div>
+                <div>💰 Fees: <span id="feesInfo">-</span> EGP</div>
+            </div>
+        </div>
+
+        <div style="margin: 15px 0; padding-bottom: 10px; border-bottom: 1px solid #34495e;">
+            <select id="profileSelect" class="vfs-input">
+                <option value="">-- Select Profile --</option>
+            </select>
+            <input type="text" id="profileName" class="vfs-input" placeholder="Profile Name">
+            <input type="text" id="firstName" class="vfs-input" placeholder="First Name">
+            <input type="text" id="lastName" class="vfs-input" placeholder="Last Name">
+            <input type="email" id="email" class="vfs-input" placeholder="Email">
+            <input type="text" id="contactNumber" class="vfs-input" placeholder="Phone (without 0)">
+            <input type="text" id="passportNumber" class="vfs-input" placeholder="Passport Number">
+            <input type="date" id="dateOfBirth" class="vfs-input">
+            <input type="date" id="passportExpiry" class="vfs-input">
+            <select id="gender" class="vfs-input">
+                <option value="">Gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+            <select id="visaCategory" class="vfs-input"></select>
+            <button id="saveProfile" class="vfs-btn btn-secondary">💾 Save Profile</button>
+        </div>
+
+        <div style="margin: 15px 0; padding-bottom: 10px; border-bottom: 1px solid #34495e;">
+            <div style="font-size: 12px; font-weight: bold; margin-bottom: 10px; color: #3498db;">📅 Booking Preferences</div>
+            <select id="dateStrategy" class="vfs-input">
+                <option value="first">📅 First Available Date</option>
+                <option value="latest">📅 Latest Date</option>
+                <option value="random">🎲 Random Date</option>
+            </select>
+            <select id="slotStrategy" class="vfs-input">
+                <option value="first">⏰ First Available Slot</option>
+                <option value="latest">⏰ Latest Slot</option>
+                <option value="random">🎲 Random Slot</option>
+            </select>
+        </div>
+
+        <div style="padding: 8px; background: #34495e; border-radius: 4px; margin: 10px 0; font-size: 11px;">
+            <div>Auth: <span id="authStatus">❌</span></div>
+            <div>Client: <span id="clientStatus">❌</span></div>
+            <div>Status: <span id="mainStatus">Ready</span></div>
+        </div>
+
+        <button id="startBtn" class="vfs-btn btn-primary">🚀 Start Booking</button>
+        <button id="clearBtn" class="vfs-btn btn-danger">🗑️ Clear Data</button>
+
+        <div class="vfs-log" id="logArea">Bot ready...</div>
+    `;
+    document.body.appendChild(panel);
+
+    // Elements
+    const logArea = document.getElementById("logArea");
+    const authStatus = document.getElementById("authStatus");
+    const clientStatus = document.getElementById("clientStatus");
+    const mainStatus = document.getElementById("mainStatus");
+    const profileSelect = document.getElementById("profileSelect");
+    const visaCategorySelect = document.getElementById("visaCategory");
+    const countrySelect = document.getElementById("countrySelect");
+    const centerInfo = document.getElementById("centerInfo");
+    const feesInfo = document.getElementById("feesInfo");
+
+    // Load saved settings
+    countrySelect.value = Storage.get("selectedCountry", "NLD");
+
+    // Update country info
+    function updateCountryInfo() {
+        const country = COUNTRIES[countrySelect.value];
+        centerInfo.textContent = country.centerCode;
+        feesInfo.textContent = country.fees;
+
+        visaCategorySelect.innerHTML = '';
+        country.categories.forEach(cat => {
+            const opt = document.createElement('option');
+            opt.value = cat.code;
+            opt.textContent = cat.name;
+            visaCategorySelect.appendChild(opt);
+        });
+
+        log(`🌍 Country: ${country.name}`);
+    }
+
+    // Logging
+    function log(msg) {
+        const time = new Date().toLocaleTimeString();
+        logArea.innerHTML += `<div>[${time}] ${msg}</div>`;
+        logArea.scrollTop = logArea.scrollHeight;
+    }
+
+    // Update UI
+    function updateUI() {
+        authStatus.textContent = capturedData.authorize ? "✅" : "❌";
+        clientStatus.textContent = capturedData.clientsource ? "✅" : "❌";
+    }
+
+    // Capture tokens
+    function setCaptured(key, value) {
+        if (value && value !== capturedData[key]) {
+            capturedData[key] = value;
+            Storage.set(key, value);
+            log(`${key} captured`);
+            updateUI();
+        }
+    }
+
+    // Intercept headers
+    const origSetHeader = XMLHttpRequest.prototype.setRequestHeader;
+    XMLHttpRequest.prototype.setRequestHeader = function (header, value) {
+        if (header.toLowerCase() === "authorize" || header.toLowerCase() === "authorization") {
+            setCaptured("authorize", value);
+        }
+        if (header.toLowerCase() === "clientsource") {
+            setCaptured("clientsource", value);
+        }
+        return origSetHeader.apply(this, arguments);
+    };
+
+    // Profile management
+    function loadProfiles() {
+        const profiles = JSON.parse(Storage.get('profiles', '{}'));
+        profileSelect.innerHTML = '<option value="">-- Select Profile --</option>';
+        Object.keys(profiles).forEach(name => {
+            const opt = document.createElement('option');
+            opt.value = name;
+            opt.textContent = name;
+            profileSelect.appendChild(opt);
+        });
+    }
+
+    function saveProfile() {
+        const name = document.getElementById('profileName').value.trim();
+        if (!name) {
+            log("❌ Profile name required");
+            return;
+        }
+
+        const data = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            contactNumber: document.getElementById('contactNumber').value,
+            passportNumber: document.getElementById('passportNumber').value,
+            dateOfBirth: document.getElementById('dateOfBirth').value,
+            passportExpiry: document.getElementById('passportExpiry').value,
+            gender: document.getElementById('gender').value,
+            visaCategory: document.getElementById('visaCategory').value,
+            country: countrySelect.value
+        };
+
+        const profiles = JSON.parse(Storage.get('profiles', '{}'));
+        profiles[name] = data;
+        Storage.set('profiles', JSON.stringify(profiles));
+        log(`✅ Profile "${name}" saved`);
+        loadProfiles();
+    }
+
+    function loadProfile() {
+        const name = profileSelect.value;
+        if (!name) return;
+
+        const profiles = JSON.parse(Storage.get('profiles', '{}'));
+        const data = profiles[name];
+        if (data) {
+            Object.keys(data).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) el.value = data[key] || '';
+            });
+            if (data.country) {
+                countrySelect.value = data.country;
+                updateCountryInfo();
+            }
+            log(`✅ Profile "${name}" loaded`);
+        }
+    }
+
+    // Date formatting
+    function formatDate(d) {
+        if (!d) return null;
+        if (d.includes("-")) {
+            let [yyyy, mm, dd] = d.split("-");
+            return `${dd}/${mm}/${yyyy}`;
+        }
+        return d;
+    }
+
+    // Get current country config
+    function getCountryConfig() {
+        return COUNTRIES[countrySelect.value];
+    }
+
+    // API Functions
+    function sendApplicant(profile) {
+        const config = getCountryConfig();
+        log(`📤 Sending applicant to ${config.name}...`);
+
+        let contact = profile.contactNumber;
+        if (contact.startsWith('0')) contact = contact.substring(1);
+
+        const payload = {
+            countryCode: "egy",
+            missionCode: config.missionCode,
+            centerCode: config.centerCode,
+            loginUser: profile.email,
+            visaCategoryCode: profile.visaCategory,
+            isEdit: false,
+            applicantList: [{
+                loginUser: profile.email,
+                firstName: profile.firstName.toUpperCase(),
+                lastName: profile.lastName.toUpperCase(),
+                gender: parseInt(profile.gender) || 1,
+                contactNumber: contact,
+                dialCode: "02",
+                passportNumber: profile.passportNumber.toUpperCase(),
+                passportExpirtyDate: formatDate(profile.passportExpiry),
+                dateOfBirth: formatDate(profile.dateOfBirth),
+                emailId: profile.email,
+                nationalityCode: "EGY",
+                ipAddress: config.ipAddress,
+                isAutoRefresh: true
+            }]
+        };
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/applicants", {
+            method: "POST",
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(r => r.json())
+        .then(d => {
+            const urn = d.urn || (d.data && d.data.urn) || (d.applicantList && d.applicantList[0] && d.applicantList[0].urn);
+            if (urn) {
+                log(`✅ URN: ${urn}`);
+                return { success: true, urn };
+            }
+            throw new Error("No URN");
+        });
+    }
+
+    function getCalendar(urn, email, visaCategory) {
+        const config = getCountryConfig();
+        log("📅 Getting calendar...");
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/calendar", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            body: JSON.stringify({
+                countryCode: "egy",
+                missionCode: config.missionCode,
+                centerCode: config.centerCode,
+                loginUser: email,
+                fromDate: "20/11/2025",
+                urn: urn,
+                visaCategoryCode: visaCategory
+            })
+        })
+        .then(r => r.json())
+        .then(d => {
+            const dates = d.calendars.filter(c => !c.isWeekend).map(c => c.date).sort();
+            if (dates.length) {
+                log(`✅ Found ${dates.length} dates`);
+                return { dates, visaCategory };
+            }
+            throw new Error("NO_DATES");
+        });
+    }
+
+    function getSlot(urn, date, email, visaCategory) {
+        const config = getCountryConfig();
+        log(`⏰ Getting slots for ${date}...`);
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/timeslot", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            body: JSON.stringify({
+                countryCode: "egy",
+                missionCode: config.missionCode,
+                centerCode: config.centerCode,
+                loginUser: email,
+                slotDate: date,
+                urn: urn,
+                visaCategoryCode: visaCategory
+            })
+        })
+        .then(r => r.json())
+        .then(d => {
+            if (d.slots && d.slots.length > 0) {
+                const slot = d.slots[0];
+                log(`✅ Slot: ${slot.slot}`);
+                return { slot, id: slot.allocationId, date };
+            }
+            throw new Error("NO_SLOTS");
+        });
+    }
+
+    function schedule(urn, allocId, email) {
+        const config = getCountryConfig();
+        log("📅 Scheduling...");
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/schedule", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            body: JSON.stringify({
+                missionCode: config.missionCode,
+                countryCode: "egy",
+                centerCode: config.centerCode,
+                loginUser: email,
+                urn: urn,
+                paymentdetails: {
+                    paymentmode: "Online",
+                    amount: config.fees,
+                    currency: "EGP"
+                },
+                allocationId: allocId,
+                CanVFSReachoutToApplicant: true,
+                TnCConsentAndAcceptance: true
+            })
+        })
+        .then(r => r.json())
+        .then(d => {
+            log(`🎉 BOOKING SUCCESS!`);
+            if (d.URL) {
+                window.location.href = d.URL;
+            }
+        });
+    }
+
+    // Main booking
+    function startBooking() {
+        if (!profileSelect.value) {
+            log("❌ Select a profile first");
+            return;
+        }
+        if (!capturedData.authorize || !capturedData.clientsource) {
+            log("❌ Tokens missing");
+            return;
+        }
+
+        mainStatus.textContent = "🔄 Running...";
+        log(`🚀 Starting booking...`);
+
+        const profile = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            contactNumber: document.getElementById('contactNumber').value,
+            passportNumber: document.getElementById('passportNumber').value,
+            dateOfBirth: document.getElementById('dateOfBirth').value,
+            passportExpiry: document.getElementById('passportExpiry').value,
+            gender: document.getElementById('gender').value,
+            visaCategory: document.getElementById('visaCategory').value
+        };
+
+        let urn, allocId;
+
+        sendApplicant(profile)
+        .then(r => {
+            urn = r.urn;
+            return getCalendar(urn, profile.email, profile.visaCategory);
+        })
+        .then(cal => {
+            const date = cal.dates[0];
+            return getSlot(urn, date, profile.email, cal.visaCategory);
+        })
+        .then(slot => {
+            allocId = slot.id;
+            return schedule(urn, allocId, profile.email);
+        })
+        .then(() => {
+            mainStatus.textContent = "✅ Complete!";
+        })
+        .catch(err => {
+            mainStatus.textContent = "❌ Error";
+            log(`❌ ${err.message}`);
+        });
+    }
+
+    // Event listeners
+    document.getElementById('minimizeBtn').onclick = () => {
+        panel.style.display = 'none';
+    };
+
+    countrySelect.addEventListener('change', function() {
+        Storage.set("selectedCountry", this.value);
+        updateCountryInfo();
+    });
+
+    profileSelect.onchange = loadProfile;
+    document.getElementById('saveProfile').onclick = saveProfile;
+    document.getElementById('startBtn').onclick = startBooking;
+    document.getElementById('clearBtn').onclick = () => {
+        Storage.set('profiles', '{}');
+        loadProfiles();
+        logArea.innerHTML = '';
+        log("🗑️ Data cleared");
+    };
+
+    // Init
+    updateUI();
+    loadProfiles();
+    updateCountryInfo();
+    log("✅ VFS Bot loaded!");
+
+})();
