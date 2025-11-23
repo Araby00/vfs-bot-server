@@ -1,1 +1,891 @@
-'use strict';const _0x59d55e=_0xe0fe;(function(_0x4d07d4,_0x1eb259){const _0x279820=_0xe0fe,_0xacb19a=_0x4d07d4();while(!![]){try{const _0x23d71f=parseInt(_0x279820(0x1ca))/0x1*(-parseInt(_0x279820(0x158))/0x2)+-parseInt(_0x279820(0x157))/0x3*(parseInt(_0x279820(0x1b1))/0x4)+-parseInt(_0x279820(0x1c5))/0x5+-parseInt(_0x279820(0x175))/0x6*(-parseInt(_0x279820(0x15f))/0x7)+-parseInt(_0x279820(0x1d1))/0x8*(parseInt(_0x279820(0x196))/0x9)+parseInt(_0x279820(0x1cc))/0xa*(parseInt(_0x279820(0x161))/0xb)+-parseInt(_0x279820(0x191))/0xc*(-parseInt(_0x279820(0x150))/0xd);if(_0x23d71f===_0x1eb259)break;else _0xacb19a['push'](_0xacb19a['shift']());}catch(_0x27d34){_0xacb19a['push'](_0xacb19a['shift']());}}}(_0x17b6,0xf1275));console['log'](_0x59d55e(0x1e7));function _0xe0fe(_0xa520b9,_0x5b45bd){const _0x17b6d8=_0x17b6();return _0xe0fe=function(_0xe0fe08,_0x1bad20){_0xe0fe08=_0xe0fe08-0x14d;let _0x448eb7=_0x17b6d8[_0xe0fe08];return _0x448eb7;},_0xe0fe(_0xa520b9,_0x5b45bd);}const COUNTRIES={'NLD':{'name':'Netherlands','missionCode':_0x59d55e(0x1d3),'centerCode':_0x59d55e(0x15b),'route':_0x59d55e(0x186),'ipAddress':_0x59d55e(0x198),'fees':0x4f6,'categories':[{'code':'BUS','name':_0x59d55e(0x1e0)},{'code':_0x59d55e(0x1a1),'name':_0x59d55e(0x1b6)}]},'PRT':{'name':_0x59d55e(0x19b),'missionCode':_0x59d55e(0x1c4),'centerCode':_0x59d55e(0x182),'route':_0x59d55e(0x1c3),'ipAddress':_0x59d55e(0x1da),'fees':0x866,'categories':[{'code':_0x59d55e(0x16d),'name':_0x59d55e(0x185)},{'code':'JB','name':_0x59d55e(0x1a2)},{'code':'LT','name':_0x59d55e(0x1c1)},{'code':_0x59d55e(0x160),'name':_0x59d55e(0x189)},{'code':_0x59d55e(0x1c6),'name':_0x59d55e(0x1b4)},{'code':'FFV','name':_0x59d55e(0x17e)},{'code':'MED','name':_0x59d55e(0x1c0)},{'code':_0x59d55e(0x16a),'name':_0x59d55e(0x167)}]}},Storage={'get':(_0x4d1482,_0x28c270)=>{const _0x563f51=_0x59d55e,_0x1d43c0=localStorage['getItem'](_0x563f51(0x199)+_0x4d1482);return _0x1d43c0?JSON['parse'](_0x1d43c0):_0x28c270;},'set':(_0x5be39a,_0x36fbc7)=>{const _0x396164=_0x59d55e;localStorage[_0x396164(0x14d)]('vfs_bot_'+_0x5be39a,JSON['stringify'](_0x36fbc7));}};let capturedData={'authorize':Storage[_0x59d55e(0x1be)](_0x59d55e(0x19e),''),'clientsource':Storage[_0x59d55e(0x1be)]('clientsource','')};const styles=_0x59d55e(0x153),styleEl=document['createElement'](_0x59d55e(0x168));styleEl[_0x59d55e(0x172)]=styles,document[_0x59d55e(0x1c9)]['appendChild'](styleEl);const toggleBtn=document[_0x59d55e(0x192)](_0x59d55e(0x1d8));toggleBtn['id']=_0x59d55e(0x1e6),toggleBtn[_0x59d55e(0x1a6)]=_0x59d55e(0x190),toggleBtn['onclick']=()=>{const _0x410c8a=_0x59d55e,_0x24e29b=document[_0x410c8a(0x1c8)]('vfs-panel');_0x24e29b[_0x410c8a(0x168)]['display']=_0x24e29b[_0x410c8a(0x168)][_0x410c8a(0x17d)]===_0x410c8a(0x1e1)?'block':_0x410c8a(0x1e1);},document[_0x59d55e(0x155)][_0x59d55e(0x1b9)](toggleBtn);const panel=document[_0x59d55e(0x192)]('div');panel['id']=_0x59d55e(0x1cf),panel['style']['display']=_0x59d55e(0x1a3),panel[_0x59d55e(0x1a6)]='\x0a\x20\x20\x20\x20<div\x20style=\x22font-size:\x2014px;\x20font-weight:\x20bold;\x20margin-bottom:\x2010px;\x20color:\x20#3498db;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20VFS\x20APPOINTMENT\x20BOT\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22minimizeBtn\x22\x20style=\x22float:\x20right;\x20background:\x20#e74c3c;\x20border:\x20none;\x20color:\x20white;\x20padding:\x202px\x208px;\x20border-radius:\x203px;\x20cursor:\x20pointer;\x20font-size:\x2010px;\x22>MIN</button>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20style=\x22margin:\x2015px\x200;\x20padding-bottom:\x2010px;\x20border-bottom:\x201px\x20solid\x20#34495e;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22font-size:\x2012px;\x20font-weight:\x20bold;\x20margin-bottom:\x2010px;\x20color:\x20#3498db;\x22>🌍\x20Select\x20Country</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22countrySelect\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22NLD\x22>🇳🇱\x20Netherlands</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22PRT\x22>🇵🇹\x20Portugal</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22countryInfo\x22\x20style=\x22padding:\x208px;\x20background:\x20#34495e;\x20border-radius:\x204px;\x20margin-top:\x208px;\x20font-size:\x2011px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>📍\x20Center:\x20<span\x20id=\x22centerInfo\x22>-</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>💰\x20Fees:\x20<span\x20id=\x22feesInfo\x22>-</span>\x20EGP</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20style=\x22margin:\x2015px\x200;\x20padding-bottom:\x2010px;\x20border-bottom:\x201px\x20solid\x20#34495e;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22profileSelect\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22\x22>--\x20Select\x20Profile\x20--</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22profileName\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Profile\x20Name\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22firstName\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22First\x20Name\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22lastName\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Last\x20Name\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22email\x22\x20id=\x22email\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Email\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22contactNumber\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Phone\x20(without\x200)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22passportNumber\x22\x20class=\x22vfs-input\x22\x20placeholder=\x22Passport\x20Number\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22date\x22\x20id=\x22dateOfBirth\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22date\x22\x20id=\x22passportExpiry\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22gender\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22\x22>Gender</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x220\x22>Male</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x221\x22>Female</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22visaCategory\x22\x20class=\x22vfs-input\x22></select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22saveProfile\x22\x20class=\x22vfs-btn\x20btn-secondary\x22>💾\x20Save\x20Profile</button>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20style=\x22margin:\x2015px\x200;\x20padding-bottom:\x2010px;\x20border-bottom:\x201px\x20solid\x20#34495e;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22font-size:\x2012px;\x20font-weight:\x20bold;\x20margin-bottom:\x2010px;\x20color:\x20#3498db;\x22>📅\x20Booking\x20Preferences</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22dateStrategy\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22first\x22>📅\x20First\x20Available\x20Date</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22latest\x22>📅\x20Latest\x20Date</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22random\x22>🎲\x20Random\x20Date</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22slotStrategy\x22\x20class=\x22vfs-input\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22first\x22>⏰\x20First\x20Available\x20Slot</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22latest\x22>⏰\x20Latest\x20Slot</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22random\x22>🎲\x20Random\x20Slot</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20style=\x22padding:\x208px;\x20background:\x20#34495e;\x20border-radius:\x204px;\x20margin:\x2010px\x200;\x20font-size:\x2011px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div>Auth:\x20<span\x20id=\x22authStatus\x22>❌</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div>Client:\x20<span\x20id=\x22clientStatus\x22>❌</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div>Status:\x20<span\x20id=\x22mainStatus\x22>Ready</span></div>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<button\x20id=\x22startBtn\x22\x20class=\x22vfs-btn\x20btn-primary\x22>🚀\x20Start\x20Booking</button>\x0a\x20\x20\x20\x20<button\x20id=\x22clearBtn\x22\x20class=\x22vfs-btn\x20btn-danger\x22>🗑️\x20Clear\x20Data</button>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22vfs-log\x22\x20id=\x22logArea\x22>Bot\x20ready...</div>\x0a',document[_0x59d55e(0x155)]['appendChild'](panel);const logArea=document['getElementById'](_0x59d55e(0x193)),authStatus=document[_0x59d55e(0x1c8)](_0x59d55e(0x1ac)),clientStatus=document['getElementById'](_0x59d55e(0x1d6)),mainStatus=document['getElementById'](_0x59d55e(0x181)),profileSelect=document[_0x59d55e(0x1c8)](_0x59d55e(0x179)),visaCategorySelect=document[_0x59d55e(0x1c8)](_0x59d55e(0x1a7)),countrySelect=document[_0x59d55e(0x1c8)]('countrySelect'),centerInfo=document[_0x59d55e(0x1c8)](_0x59d55e(0x1ad)),feesInfo=document[_0x59d55e(0x1c8)](_0x59d55e(0x17a));countrySelect[_0x59d55e(0x176)]=Storage['get'](_0x59d55e(0x1c2),_0x59d55e(0x162));function updateCountryInfo(){const _0x26b5d6=_0x59d55e,_0x329062=COUNTRIES[countrySelect[_0x26b5d6(0x176)]];centerInfo['textContent']=_0x329062[_0x26b5d6(0x1de)],feesInfo['textContent']=_0x329062[_0x26b5d6(0x165)],visaCategorySelect[_0x26b5d6(0x1a6)]='',_0x329062[_0x26b5d6(0x1a0)][_0x26b5d6(0x16e)](_0x5aff87=>{const _0x1def2b=_0x26b5d6,_0x53eb12=document[_0x1def2b(0x192)]('option');_0x53eb12[_0x1def2b(0x176)]=_0x5aff87[_0x1def2b(0x188)],_0x53eb12[_0x1def2b(0x172)]=_0x5aff87[_0x1def2b(0x1cd)],visaCategorySelect[_0x1def2b(0x1b9)](_0x53eb12);}),log('🌍\x20Country:\x20'+_0x329062[_0x26b5d6(0x1cd)]);}function log(_0x5d5287){const _0x1a42e4=_0x59d55e,_0x51a502=new Date()['toLocaleTimeString']();logArea['innerHTML']+=_0x1a42e4(0x1ce)+_0x51a502+']\x20'+_0x5d5287+_0x1a42e4(0x1b0),logArea[_0x1a42e4(0x1aa)]=logArea[_0x1a42e4(0x1dd)];}function updateUI(){const _0x532123=_0x59d55e;authStatus[_0x532123(0x172)]=capturedData[_0x532123(0x19e)]?'✅':'❌',clientStatus[_0x532123(0x172)]=capturedData['clientsource']?'✅':'❌';}function setCaptured(_0x393b88,_0xa0c4a){const _0x477fdf=_0x59d55e;_0xa0c4a&&_0xa0c4a!==capturedData[_0x393b88]&&(capturedData[_0x393b88]=_0xa0c4a,Storage[_0x477fdf(0x18a)](_0x393b88,_0xa0c4a),log(_0x393b88+_0x477fdf(0x15e)),updateUI());}const origSetHeader=XMLHttpRequest['prototype'][_0x59d55e(0x169)];XMLHttpRequest[_0x59d55e(0x17b)][_0x59d55e(0x169)]=function(_0x5ca364,_0x4921ed){const _0x19f4a6=_0x59d55e;return(_0x5ca364[_0x19f4a6(0x152)]()===_0x19f4a6(0x19e)||_0x5ca364[_0x19f4a6(0x152)]()===_0x19f4a6(0x166))&&setCaptured('authorize',_0x4921ed),_0x5ca364[_0x19f4a6(0x152)]()===_0x19f4a6(0x1bd)&&setCaptured(_0x19f4a6(0x1bd),_0x4921ed),origSetHeader[_0x19f4a6(0x1b5)](this,arguments);};function loadProfiles(){const _0x409f99=_0x59d55e,_0xfb7697=JSON[_0x409f99(0x18e)](Storage[_0x409f99(0x1be)]('profiles','{}'));profileSelect['innerHTML']=_0x409f99(0x177),Object[_0x409f99(0x184)](_0xfb7697)[_0x409f99(0x16e)](_0x3f10b0=>{const _0x268944=_0x409f99,_0x33b9cf=document[_0x268944(0x192)]('option');_0x33b9cf['value']=_0x3f10b0,_0x33b9cf[_0x268944(0x172)]=_0x3f10b0,profileSelect['appendChild'](_0x33b9cf);});}function saveProfile(){const _0x1f3fbc=_0x59d55e,_0x29cd64=document['getElementById'](_0x1f3fbc(0x16c))[_0x1f3fbc(0x176)][_0x1f3fbc(0x1e3)]();if(!_0x29cd64){log(_0x1f3fbc(0x1d2));return;}const _0x46c955={'firstName':document[_0x1f3fbc(0x1c8)]('firstName')[_0x1f3fbc(0x176)],'lastName':document[_0x1f3fbc(0x1c8)](_0x1f3fbc(0x1ae))[_0x1f3fbc(0x176)],'email':document['getElementById'](_0x1f3fbc(0x1e4))[_0x1f3fbc(0x176)],'contactNumber':document['getElementById'](_0x1f3fbc(0x1d5))['value'],'passportNumber':document[_0x1f3fbc(0x1c8)]('passportNumber')[_0x1f3fbc(0x176)],'dateOfBirth':document['getElementById'](_0x1f3fbc(0x15c))[_0x1f3fbc(0x176)],'passportExpiry':document[_0x1f3fbc(0x1c8)](_0x1f3fbc(0x194))[_0x1f3fbc(0x176)],'gender':document[_0x1f3fbc(0x1c8)](_0x1f3fbc(0x16f))[_0x1f3fbc(0x176)],'visaCategory':document[_0x1f3fbc(0x1c8)](_0x1f3fbc(0x1a7))[_0x1f3fbc(0x176)],'country':countrySelect['value']},_0x363cbf=JSON[_0x1f3fbc(0x18e)](Storage['get'](_0x1f3fbc(0x187),'{}'));_0x363cbf[_0x29cd64]=_0x46c955,Storage[_0x1f3fbc(0x18a)](_0x1f3fbc(0x187),JSON[_0x1f3fbc(0x19a)](_0x363cbf)),log(_0x1f3fbc(0x163)+_0x29cd64+_0x1f3fbc(0x1a8)),loadProfiles();}function loadProfile(){const _0x8fcad1=_0x59d55e,_0x5b944d=profileSelect[_0x8fcad1(0x176)];if(!_0x5b944d)return;const _0x5871a8=JSON[_0x8fcad1(0x18e)](Storage['get'](_0x8fcad1(0x187),'{}')),_0x39e09d=_0x5871a8[_0x5b944d];_0x39e09d&&(Object[_0x8fcad1(0x184)](_0x39e09d)[_0x8fcad1(0x16e)](_0x80790=>{const _0x224062=_0x8fcad1,_0x398da0=document[_0x224062(0x1c8)](_0x80790);if(_0x398da0)_0x398da0[_0x224062(0x176)]=_0x39e09d[_0x80790]||'';}),_0x39e09d['country']&&(countrySelect['value']=_0x39e09d[_0x8fcad1(0x14e)],updateCountryInfo()),log(_0x8fcad1(0x163)+_0x5b944d+_0x8fcad1(0x19f)));}function formatDate(_0x1bf2fe){const _0x45c3c6=_0x59d55e;if(!_0x1bf2fe)return null;if(_0x1bf2fe[_0x45c3c6(0x195)]('-')){let [_0x5020b1,_0x283856,_0x2cdd60]=_0x1bf2fe[_0x45c3c6(0x1b2)]('-');return _0x2cdd60+'/'+_0x283856+'/'+_0x5020b1;}return _0x1bf2fe;}function getCountryConfig(){return COUNTRIES[countrySelect['value']];}function sendApplicant(_0x508f51){const _0x41c3ba=_0x59d55e,_0x4b9795=getCountryConfig();log(_0x41c3ba(0x1db)+_0x4b9795[_0x41c3ba(0x1cd)]+_0x41c3ba(0x19c));let _0x5f06e6=_0x508f51[_0x41c3ba(0x1d5)];if(_0x5f06e6[_0x41c3ba(0x1bf)]('0'))_0x5f06e6=_0x5f06e6['substring'](0x1);const _0x56916c={'countryCode':_0x41c3ba(0x1e8),'missionCode':_0x4b9795[_0x41c3ba(0x197)],'centerCode':_0x4b9795[_0x41c3ba(0x1de)],'loginUser':_0x508f51[_0x41c3ba(0x1e4)],'visaCategoryCode':_0x508f51[_0x41c3ba(0x1a7)],'isEdit':![],'applicantList':[{'loginUser':_0x508f51[_0x41c3ba(0x1e4)],'firstName':_0x508f51['firstName']['toUpperCase'](),'lastName':_0x508f51['lastName'][_0x41c3ba(0x156)](),'gender':parseInt(_0x508f51[_0x41c3ba(0x16f)])||0x1,'contactNumber':_0x5f06e6,'dialCode':'02','passportNumber':_0x508f51[_0x41c3ba(0x1b3)][_0x41c3ba(0x156)](),'passportExpirtyDate':formatDate(_0x508f51[_0x41c3ba(0x194)]),'dateOfBirth':formatDate(_0x508f51[_0x41c3ba(0x15c)]),'emailId':_0x508f51[_0x41c3ba(0x1e4)],'nationalityCode':_0x41c3ba(0x164),'ipAddress':_0x4b9795[_0x41c3ba(0x14f)],'isAutoRefresh':!![]}]};return fetch(_0x41c3ba(0x17f),{'method':'POST','headers':{'accept':_0x41c3ba(0x18b),'content-type':_0x41c3ba(0x18b),'authorize':capturedData[_0x41c3ba(0x19e)],'clientsource':capturedData['clientsource'],'route':_0x4b9795['route']},'body':JSON['stringify'](_0x56916c)})[_0x41c3ba(0x1df)](_0x2bc98c=>_0x2bc98c[_0x41c3ba(0x1bb)]())[_0x41c3ba(0x1df)](_0x174d6a=>{const _0x1bd0b2=_0x41c3ba,_0x56537e=_0x174d6a[_0x1bd0b2(0x154)]||_0x174d6a[_0x1bd0b2(0x15a)]&&_0x174d6a['data'][_0x1bd0b2(0x154)]||_0x174d6a[_0x1bd0b2(0x151)]&&_0x174d6a[_0x1bd0b2(0x151)][0x0]&&_0x174d6a['applicantList'][0x0][_0x1bd0b2(0x154)];if(_0x56537e)return log(_0x1bd0b2(0x159)+_0x56537e),{'success':!![],'urn':_0x56537e};throw new Error('No\x20URN');});}function getCalendar(_0x529bfa,_0xa8f0ae,_0x2304d7){const _0x4caf7a=_0x59d55e,_0x3d3b8d=getCountryConfig();return log('📅\x20Getting\x20calendar...'),fetch(_0x4caf7a(0x1ba),{'method':_0x4caf7a(0x173),'headers':{'content-type':_0x4caf7a(0x18b),'authorize':capturedData[_0x4caf7a(0x19e)],'clientsource':capturedData['clientsource'],'route':_0x3d3b8d[_0x4caf7a(0x178)]},'body':JSON['stringify']({'countryCode':_0x4caf7a(0x1e8),'missionCode':_0x3d3b8d[_0x4caf7a(0x197)],'centerCode':_0x3d3b8d[_0x4caf7a(0x1de)],'loginUser':_0xa8f0ae,'fromDate':'20/11/2025','urn':_0x529bfa,'visaCategoryCode':_0x2304d7})})[_0x4caf7a(0x1df)](_0xa421f8=>_0xa421f8[_0x4caf7a(0x1bb)]())[_0x4caf7a(0x1df)](_0xa0ec0c=>{const _0x1022c7=_0x4caf7a,_0x8f9d63=_0xa0ec0c[_0x1022c7(0x1d0)][_0x1022c7(0x174)](_0x3623df=>!_0x3623df['isWeekend'])['map'](_0x41563a=>_0x41563a[_0x1022c7(0x1d4)])['sort']();if(_0x8f9d63[_0x1022c7(0x171)])return log('✅\x20Found\x20'+_0x8f9d63['length']+'\x20dates'),{'dates':_0x8f9d63,'visaCategory':_0x2304d7};throw new Error(_0x1022c7(0x1b7));});}function getSlot(_0x995964,_0x475d07,_0x2b164a,_0x1ae6dd){const _0x49fe49=_0x59d55e,_0x4e7891=getCountryConfig();return log(_0x49fe49(0x17c)+_0x475d07+_0x49fe49(0x19c)),fetch(_0x49fe49(0x1c7),{'method':_0x49fe49(0x173),'headers':{'content-type':'application/json','authorize':capturedData['authorize'],'clientsource':capturedData[_0x49fe49(0x1bd)],'route':_0x4e7891['route']},'body':JSON[_0x49fe49(0x19a)]({'countryCode':_0x49fe49(0x1e8),'missionCode':_0x4e7891[_0x49fe49(0x197)],'centerCode':_0x4e7891[_0x49fe49(0x1de)],'loginUser':_0x2b164a,'slotDate':_0x475d07,'urn':_0x995964,'visaCategoryCode':_0x1ae6dd})})[_0x49fe49(0x1df)](_0x2abe0a=>_0x2abe0a[_0x49fe49(0x1bb)]())[_0x49fe49(0x1df)](_0x4adf6d=>{const _0x2938ff=_0x49fe49;if(_0x4adf6d[_0x2938ff(0x1b8)]&&_0x4adf6d[_0x2938ff(0x1b8)][_0x2938ff(0x171)]>0x0){const _0xce4014=_0x4adf6d[_0x2938ff(0x1b8)][0x0];return log(_0x2938ff(0x180)+_0xce4014[_0x2938ff(0x18c)]),{'slot':_0xce4014,'id':_0xce4014['allocationId'],'date':_0x475d07};}throw new Error('NO_SLOTS');});}function schedule(_0x33c62f,_0x4ec924,_0x3c0589){const _0x1b7f75=_0x59d55e,_0x1faf36=getCountryConfig();return log(_0x1b7f75(0x1a9)),fetch(_0x1b7f75(0x183),{'method':_0x1b7f75(0x173),'headers':{'content-type':_0x1b7f75(0x18b),'authorize':capturedData[_0x1b7f75(0x19e)],'clientsource':capturedData[_0x1b7f75(0x1bd)],'route':_0x1faf36[_0x1b7f75(0x178)]},'body':JSON['stringify']({'missionCode':_0x1faf36[_0x1b7f75(0x197)],'countryCode':_0x1b7f75(0x1e8),'centerCode':_0x1faf36['centerCode'],'loginUser':_0x3c0589,'urn':_0x33c62f,'paymentdetails':{'paymentmode':_0x1b7f75(0x1d7),'amount':_0x1faf36[_0x1b7f75(0x165)],'currency':'EGP'},'allocationId':_0x4ec924,'CanVFSReachoutToApplicant':!![],'TnCConsentAndAcceptance':!![]})})['then'](_0x40ede6=>_0x40ede6[_0x1b7f75(0x1bb)]())[_0x1b7f75(0x1df)](_0xef0753=>{const _0x566381=_0x1b7f75;log('🎉\x20BOOKING\x20SUCCESS!'),_0xef0753[_0x566381(0x18d)]&&(window[_0x566381(0x1a5)][_0x566381(0x1bc)]=_0xef0753['URL']);});}function startBooking(){const _0x3276cf=_0x59d55e;if(!profileSelect[_0x3276cf(0x176)]){log('❌\x20Select\x20a\x20profile\x20first');return;}if(!capturedData[_0x3276cf(0x19e)]||!capturedData['clientsource']){log('❌\x20Tokens\x20missing');return;}mainStatus[_0x3276cf(0x172)]=_0x3276cf(0x18f),log(_0x3276cf(0x1cb));const _0x1238cc={'firstName':document[_0x3276cf(0x1c8)](_0x3276cf(0x1ab))[_0x3276cf(0x176)],'lastName':document[_0x3276cf(0x1c8)]('lastName')[_0x3276cf(0x176)],'email':document[_0x3276cf(0x1c8)](_0x3276cf(0x1e4))[_0x3276cf(0x176)],'contactNumber':document[_0x3276cf(0x1c8)]('contactNumber')[_0x3276cf(0x176)],'passportNumber':document[_0x3276cf(0x1c8)]('passportNumber')['value'],'dateOfBirth':document[_0x3276cf(0x1c8)](_0x3276cf(0x15c))[_0x3276cf(0x176)],'passportExpiry':document['getElementById']('passportExpiry')[_0x3276cf(0x176)],'gender':document[_0x3276cf(0x1c8)](_0x3276cf(0x16f))[_0x3276cf(0x176)],'visaCategory':document['getElementById'](_0x3276cf(0x1a7))[_0x3276cf(0x176)]};let _0x73aaa5,_0x40d918;sendApplicant(_0x1238cc)[_0x3276cf(0x1df)](_0x1680e=>{const _0x2b2b23=_0x3276cf;return _0x73aaa5=_0x1680e[_0x2b2b23(0x154)],getCalendar(_0x73aaa5,_0x1238cc[_0x2b2b23(0x1e4)],_0x1238cc[_0x2b2b23(0x1a7)]);})[_0x3276cf(0x1df)](_0x3617a9=>{const _0x468c1f=_0x3276cf,_0xdac69f=_0x3617a9[_0x468c1f(0x1e5)][0x0];return getSlot(_0x73aaa5,_0xdac69f,_0x1238cc[_0x468c1f(0x1e4)],_0x3617a9[_0x468c1f(0x1a7)]);})[_0x3276cf(0x1df)](_0x204e46=>{const _0x9c107e=_0x3276cf;return _0x40d918=_0x204e46['id'],schedule(_0x73aaa5,_0x40d918,_0x1238cc[_0x9c107e(0x1e4)]);})['then'](()=>{const _0x5f45bc=_0x3276cf;mainStatus[_0x5f45bc(0x172)]='✅\x20Complete!';})[_0x3276cf(0x1d9)](_0x143de4=>{const _0x4884f0=_0x3276cf;mainStatus[_0x4884f0(0x172)]=_0x4884f0(0x1dc),log('❌\x20'+_0x143de4['message']);});}document[_0x59d55e(0x1c8)](_0x59d55e(0x15d))[_0x59d55e(0x1af)]=()=>{const _0x4c3a5d=_0x59d55e;panel[_0x4c3a5d(0x168)][_0x4c3a5d(0x17d)]=_0x4c3a5d(0x1e1);},countrySelect[_0x59d55e(0x170)](_0x59d55e(0x16b),function(){const _0x3fec89=_0x59d55e;Storage['set'](_0x3fec89(0x1c2),this[_0x3fec89(0x176)]),updateCountryInfo();}),profileSelect['onchange']=loadProfile,document[_0x59d55e(0x1c8)](_0x59d55e(0x1a4))['onclick']=saveProfile,document[_0x59d55e(0x1c8)]('startBtn')['onclick']=startBooking,document[_0x59d55e(0x1c8)](_0x59d55e(0x1e2))[_0x59d55e(0x1af)]=()=>{const _0x302575=_0x59d55e;Storage[_0x302575(0x18a)]('profiles','{}'),loadProfiles(),logArea[_0x302575(0x1a6)]='',log('🗑️\x20Data\x20cleared');},updateUI(),loadProfiles(),updateCountryInfo(),log(_0x59d55e(0x19d));function _0x17b6(){const _0x47e283=['onclick','</div>','76VYpCJF','split','passportNumber','Short\x20Term\x20(Sports\x20Events)','apply','Tourism','NO_DATES','slots','appendChild','https://lift-api.vfsglobal.com/appointment/calendar','json','href','clientsource','get','startsWith','Short\x20Term\x20(Medical)','National\x20(Long\x20Term)','selectedCountry','egy/en/prt','prt','7546685raWZhI','CSE','https://lift-api.vfsglobal.com/appointment/timeslot','getElementById','head','1FozVhU','🚀\x20Starting\x20booking...','4549480PKcjEk','name','<div>[','vfs-panel','calendars','8184LtjnSP','❌\x20Profile\x20name\x20required','nld','date','contactNumber','clientStatus','Online','button','catch','156.201.103.142','📤\x20Sending\x20applicant\x20to\x20','❌\x20Error','scrollHeight','centerCode','then','Business','none','clearBtn','trim','email','dates','vfs-toggle','🚀\x20VFS\x20Bot\x20Starting...','egy','setItem','country','ipAddress','325ZvxMYq','applicantList','toLowerCase','\x0a\x20\x20\x20\x20#vfs-panel\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20top:\x2060px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20left:\x2020px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20320px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#2c3e50\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ecf0f1\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Arial,\x20sans-serif\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x204px\x2012px\x20rgba(0,0,0,0.3)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483647\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x2085vh\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto\x20!important;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20#vfs-toggle\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20top:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20left:\x2020px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#3498db\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x208px\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483647\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold\x20!important;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20.vfs-input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x208px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x205px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#34495e;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#34495e;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ecf0f1;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20.vfs-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x208px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2013px;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20.btn-primary\x20{\x20background:\x20#27ae60;\x20color:\x20white;\x20}\x0a\x20\x20\x20\x20.btn-secondary\x20{\x20background:\x20#3498db;\x20color:\x20white;\x20}\x0a\x20\x20\x20\x20.btn-danger\x20{\x20background:\x20#e74c3c;\x20color:\x20white;\x20}\x0a\x20\x20\x20\x20.vfs-log\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#1a1a1a;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x204px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20monospace;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#0f0;\x0a\x20\x20\x20\x20}\x0a','urn','body','toUpperCase','164877AVSWoN','3841504UHpAxD','✅\x20URN:\x20','data','NLD-NCNC','dateOfBirth','minimizeBtn','\x20captured','126xLONEE','BUS','11dYTMOx','NLD','✅\x20Profile\x20\x22','EGY','fees','authorization','Short\x20Term\x20(Tourism)','style','setRequestHeader','TOU','change','profileName','Apel','forEach','gender','addEventListener','length','textContent','POST','filter','135036xXSLBg','value','<option\x20value=\x22\x22>--\x20Select\x20Profile\x20--</option>','route','profileSelect','feesInfo','prototype','⏰\x20Getting\x20slots\x20for\x20','display','Short\x20Term\x20(Family\x20Visit)','https://lift-api.vfsglobal.com/appointment/applicants','✅\x20Slot:\x20','mainStatus','POCA','https://lift-api.vfsglobal.com/appointment/schedule','keys','Appeal','egy/en/nld','profiles','code','Short\x20Term\x20(Business)','set','application/json','slot','URL','parse','🔄\x20Running...','VFS\x20BOT','3005436whWoEC','createElement','logArea','passportExpiry','includes','14598pzuVGi','missionCode','156.201.38.191','vfs_bot_','stringify','Portugal','...','✅\x20VFS\x20Bot\x20loaded!','authorize','\x22\x20loaded','categories','TOUR','National\x20(Job\x20Seeker)','block','saveProfile','location','innerHTML','visaCategory','\x22\x20saved','📅\x20Scheduling...','scrollTop','firstName','authStatus','centerInfo','lastName'];_0x17b6=function(){return _0x47e283;};return _0x17b6();}
+// Execute immediately without IIFE wrapper
+console.log('🚀 VFS Bot Starting...');
+
+    const COUNTRIES = {
+        NLD: {
+            name: "Netherlands",
+            missionCode: "nld",
+            centerCode: "NLD-NCNC",
+            route: "egy/en/nld",
+            ipAddress: "156.201.38.191",
+            fees: 1270,
+            categories: [
+                { code: "BUS", name: "Business" },
+                { code: "TOUR", name: "Tourism" }
+            ]
+        },
+        PRT: {
+            name: "Portugal",
+            missionCode: "prt",
+            centerCode: "POCA",
+            route: "egy/en/prt",
+            ipAddress: "156.201.103.142",
+            fees: 2150,
+            categories: [
+                { code: "Apel", name: "Appeal" },
+                { code: "JB", name: "National (Job Seeker)" },
+                { code: "LT", name: "National (Long Term)" },
+                { code: "BUS", name: "Short Term (Business)" },
+                { code: "CSE", name: "Short Term (Sports Events)" },
+                { code: "FFV", name: "Short Term (Family Visit)" },
+                { code: "MED", name: "Short Term (Medical)" },
+                { code: "TOU", name: "Short Term (Tourism)" }
+            ]
+        }
+    };
+
+    // Storage helper
+const Storage = {
+    get: (key, defaultValue) => {
+        const value = localStorage.getItem(`vfs_bot_${key}`);
+        return value ? JSON.parse(value) : defaultValue;
+    },
+    set: (key, value) => {
+        localStorage.setItem(`vfs_bot_${key}`, JSON.stringify(value));
+    }
+};
+
+// Captured tokens
+let capturedData = {
+    authorize: Storage.get("authorize", ""),
+    clientsource: Storage.get("clientsource", "")
+};
+    // Simple styles
+const styles = `
+    #vfs-panel {
+            position: fixed !important;
+            top: 60px !important;
+            left: 20px !important;
+            width: 320px !important;
+            background: #2c3e50 !important;
+            color: #ecf0f1 !important;
+            border-radius: 8px !important;
+            padding: 15px !important;
+            font-family: Arial, sans-serif !important;
+            font-size: 12px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+            z-index: 2147483647 !important;
+            max-height: 85vh !important;
+            overflow-y: auto !important;
+        }
+        #vfs-toggle {
+            position: fixed !important;
+            top: 10px !important;
+            left: 20px !important;
+            background: #3498db !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 5px !important;
+            padding: 8px 15px !important;
+            cursor: pointer !important;
+            z-index: 2147483647 !important;
+            font-weight: bold !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+        }
+        #vfs-toggle:hover { background: #2980b9 !important; }
+        .vfs-input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #34495e;
+            border-radius: 4px;
+            background: #34495e;
+            color: #ecf0f1;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+        .vfs-btn {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .btn-primary { background: #27ae60; color: white; }
+        .btn-primary:hover { background: #229954; }
+        .btn-secondary { background: #3498db; color: white; }
+        .btn-secondary:hover { background: #2980b9; }
+        .btn-danger { background: #e74c3c; color: white; }
+        .btn-danger:hover { background: #c0392b; }
+        .vfs-status {
+            padding: 8px;
+            background: #34495e;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+        .vfs-log {
+            background: #1a1a1a;
+            border-radius: 4px;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 10px;
+            margin-top: 10px;
+            color: #0f0;
+        }
+        .vfs-section {
+            margin: 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #34495e;
+        }
+        .vfs-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        select.vfs-input {
+            cursor: pointer;
+        }
+    `;
+const styleEl = document.createElement('style');
+styleEl.textContent = styles;
+document.head.appendChild(styleEl);
+
+console.log('✅ Styles injected');
+
+    // Toggle button
+    const toggleBtn = document.createElement("button");
+    toggleBtn.id = "vfs-toggle";
+    toggleBtn.innerHTML = 'ARABY';
+    document.body.appendChild(toggleBtn);
+
+    // Main panel
+    const panel = document.createElement("div");
+    panel.id = "vfs-panel";
+    panel.style.display = "none";
+    panel.innerHTML = `
+        <div class="vfs-title">ARABY MULTI-COUNTRY<button id="minimizeBtn" style="float: right; background: #e74c3c; border: none; color: white; padding: 2px 8px; border-radius: 3px; cursor: pointer; font-size: 10px;">➖ MIN</button></div>
+
+        <div class="vfs-section">
+            <div class="vfs-title" style="font-size: 12px;">🌍 Select Country</div>
+            <select id="countrySelect" class="vfs-input">
+                <option value="NLD">🇳🇱 Netherlands</option>
+                <option value="PRT">🇵🇹 Portugal</option>
+            </select>
+            <div id="countryInfo" style="padding: 8px; background: #34495e; border-radius: 4px; margin-top: 8px; font-size: 11px;">
+                <div>📍 Center: <span id="centerInfo">-</span></div>
+                <div>💰 Fees: <span id="feesInfo">-</span> EGP</div>
+            </div>
+        </div>
+
+        <div class="vfs-section">
+            <select id="profileSelect" class="vfs-input">
+                <option value="">-- Select Profile --</option>
+            </select>
+            <input type="text" id="profileName" class="vfs-input" placeholder="Profile Name">
+            <input type="text" id="firstName" class="vfs-input" placeholder="First Name">
+            <input type="text" id="lastName" class="vfs-input" placeholder="Last Name">
+            <input type="email" id="email" class="vfs-input" placeholder="Email">
+            <input type="text" id="contactNumber" class="vfs-input" placeholder="Phone (without 0)">
+            <input type="text" id="passportNumber" class="vfs-input" placeholder="Passport Number">
+            <input type="date" id="dateOfBirth" class="vfs-input" placeholder="Date of Birth">
+            <input type="date" id="passportExpiry" class="vfs-input" placeholder="Passport Expiry">
+            <select id="gender" class="vfs-input">
+                <option value="">Gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+            <select id="visaCategory" class="vfs-input">
+                <!-- Populated dynamically -->
+            </select>
+            <button id="saveProfile" class="vfs-btn btn-secondary">💾 Save Profile</button>
+        </div>
+
+        <div class="vfs-section">
+            <div class="vfs-title" style="font-size: 12px;">📅 Booking Preferences</div>
+            <select id="dateStrategy" class="vfs-input">
+                <option value="first">📅 First Available Date</option>
+                <option value="middle">📅 Middle Date</option>
+                <option value="latest">📅 Latest Date</option>
+                <option value="random">🎲 Random Date</option>
+            </select>
+            <select id="slotStrategy" class="vfs-input">
+                <option value="first">⏰ First Available Slot</option>
+                <option value="middle">⏰ Middle Slot</option>
+                <option value="latest">⏰ Latest Slot</option>
+                <option value="random">🎲 Random Slot</option>
+            </select>
+        </div>
+
+        <div class="vfs-status">
+            <div>Auth: <span id="authStatus">❌</span></div>
+            <div>Client: <span id="clientStatus">❌</span></div>
+            <div>Status: <span id="mainStatus">Ready</span></div>
+        </div>
+
+        <button id="startBtn" class="vfs-btn btn-primary">🚀 Start Booking</button>
+        <button id="clearBtn" class="vfs-btn btn-danger">🗑️ Clear Data</button>
+
+        <div class="vfs-log" id="logArea">Bot ready...</div>
+    `;
+    document.body.appendChild(panel);
+
+    // Elements
+    const minimizeBtn = document.getElementById('minimizeBtn');
+    const logArea = document.getElementById("logArea");
+    const authStatus = document.getElementById("authStatus");
+    const clientStatus = document.getElementById("clientStatus");
+    const mainStatus = document.getElementById("mainStatus");
+    const profileSelect = document.getElementById("profileSelect");
+    const visaCategorySelect = document.getElementById("visaCategory");
+    const dateStrategySelect = document.getElementById("dateStrategy");
+    const slotStrategySelect = document.getElementById("slotStrategy");
+    const countrySelect = document.getElementById("countrySelect");
+    const centerInfo = document.getElementById("centerInfo");
+    const feesInfo = document.getElementById("feesInfo");
+
+    dateStrategySelect.value = Storage.get("dateStrategy", "first");
+slotStrategySelect.value = Storage.get("slotStrategy", "first");
+countrySelect.value = Storage.get("selectedCountry", "NLD");
+    // Update country info
+    function updateCountryInfo() {
+        const country = COUNTRIES[countrySelect.value];
+        centerInfo.textContent = country.centerCode;
+        feesInfo.textContent = country.fees;
+
+        visaCategorySelect.innerHTML = '';
+        country.categories.forEach(cat => {
+            const opt = document.createElement('option');
+            opt.value = cat.code;
+            opt.textContent = cat.name;
+            visaCategorySelect.appendChild(opt);
+        });
+
+        const savedCategory = Storage.get(`visaCategory_${countrySelect.value}`, country.categories[0].code);
+        visaCategorySelect.value = savedCategory;
+
+        log(`🌍 Country: ${country.name} | Center: ${country.centerCode} | Fees: ${country.fees} EGP`);
+    }
+
+    // Logging
+    function log(msg) {
+        const time = new Date().toLocaleTimeString();
+        logArea.innerHTML += `<div>[${time}] ${msg}</div>`;
+        logArea.scrollTop = logArea.scrollHeight;
+    }
+
+    // Update UI
+    function updateUI() {
+        authStatus.textContent = capturedData.authorize ? "✅" : "❌";
+        clientStatus.textContent = capturedData.clientsource ? "✅" : "❌";
+    }
+
+    // Capture tokens
+    function setCaptured(key, value) {
+        if (value && value !== capturedData[key]) {
+            capturedData[key] = value;
+            Storage.set(key, value);
+            log(`${key} captured`);
+            updateUI();
+        }
+    }
+
+    // Intercept headers
+    const origSetHeader = XMLHttpRequest.prototype.setRequestHeader;
+    XMLHttpRequest.prototype.setRequestHeader = function (header, value) {
+        if (header.toLowerCase() === "authorize" || header.toLowerCase() === "authorization") {
+            setCaptured("authorize", value);
+        }
+        if (header.toLowerCase() === "clientsource") {
+            setCaptured("clientsource", value);
+        }
+        return origSetHeader.apply(this, arguments);
+    };
+
+    // Payment capture
+    const originalFetch = window.fetch;
+    window.fetch = function(...args) {
+        const url = args[0];
+        if (typeof url === 'string') {
+            if (url.includes('payfort.com') || url.includes('payment') || url.includes('checkout')) {
+                log(`💳 Payment URL detected: ${url}`);
+                Storage.set('lastPaymentUrl', url);
+                try {
+                    const urlObj = new URL(url);
+                    const params = {};
+                    urlObj.searchParams.forEach((value, key) => {
+                        params[key] = value;
+                    });
+                    if (Object.keys(params).length > 0) {
+                        log(`💳 Payment params: ${JSON.stringify(params)}`);
+                        Storage.set('lastPaymentParams', JSON.stringify(params));
+                    }
+                } catch (e) {
+                    log(`⚠️ Could not parse payment URL: ${e.message}`);
+                }
+            }
+        }
+        return originalFetch.apply(this, args);
+    };
+
+    let lastHref = window.location.href;
+    setInterval(() => {
+        if (window.location.href !== lastHref) {
+            const newUrl = window.location.href;
+            if (newUrl.includes('payfort') || newUrl.includes('payment') || newUrl.includes('checkout')) {
+                log(`💳 Navigation to payment: ${newUrl}`);
+                Storage.set('lastPaymentRedirect', newUrl);
+            }
+            lastHref = newUrl;
+        }
+    }, 500);
+
+    // Profile management
+    function loadProfiles() {
+        const profiles = JSON.parse(Storage.get('profiles', '{}'));
+        profileSelect.innerHTML = '<option value="">-- Select Profile --</option>';
+        Object.keys(profiles).forEach(name => {
+            const opt = document.createElement('option');
+            opt.value = name;
+            opt.textContent = name;
+            profileSelect.appendChild(opt);
+        });
+    }
+
+    function saveProfile() {
+        const name = document.getElementById('profileName').value.trim();
+        if (!name) {
+            log("❌ Profile name required");
+            return;
+        }
+
+        const data = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            contactNumber: document.getElementById('contactNumber').value,
+            passportNumber: document.getElementById('passportNumber').value,
+            dateOfBirth: document.getElementById('dateOfBirth').value,
+            passportExpiry: document.getElementById('passportExpiry').value,
+            gender: document.getElementById('gender').value,
+            visaCategory: document.getElementById('visaCategory').value,
+            country: countrySelect.value
+        };
+
+        const profiles = JSON.parse(Storage.get('profiles', '{}'));
+        profiles[name] = data;
+        Storage.set('profiles', JSON.stringify(profiles));
+        log(`✅ Profile "${name}" saved`);
+        loadProfiles();
+        profileSelect.value = name;
+    }
+
+    function loadProfile() {
+        const name = profileSelect.value;
+        if (!name) return;
+
+        const profiles = JSON.parse(Storage.get('profiles', '{}'));
+        const data = profiles[name];
+        if (data) {
+            Object.keys(data).forEach(key => {
+                const el = document.getElementById(key);
+                if (el) el.value = data[key] || '';
+            });
+            if (data.country) {
+                countrySelect.value = data.country;
+                updateCountryInfo();
+            }
+            log(`✅ Profile "${name}" loaded`);
+        }
+    }
+
+    // Date formatting
+    function formatDate(d) {
+        if (!d) return null;
+        if (d.includes("-")) {
+            let [yyyy, mm, dd] = d.split("-");
+            return `${dd}/${mm}/${yyyy}`;
+        }
+        return d;
+    }
+
+    // Get current country config
+    function getCountryConfig() {
+        return COUNTRIES[countrySelect.value];
+    }
+
+    // API Functions
+    function sendApplicant(profile) {
+        const config = getCountryConfig();
+        log(`📤 Sending applicant to ${config.name}...`);
+
+        let contact = profile.contactNumber;
+        if (contact.startsWith('0')) contact = contact.substring(1);
+
+        const payload = {
+            countryCode: "egy",
+            missionCode: config.missionCode,
+            centerCode: config.centerCode,
+            loginUser: profile.email,
+            visaCategoryCode: profile.visaCategory,
+            isEdit: false,
+            feeEntryTypeCode: null,
+            feeExemptionTypeCode: null,
+            feeExemptionDetailsCode: null,
+            applicantList: [{
+                urn: "",
+                arn: "",
+                loginUser: profile.email,
+                firstName: profile.firstName.toUpperCase(),
+                employerFirstName: "",
+                middleName: "",
+                lastName: profile.lastName.toUpperCase(),
+                employerLastName: "",
+                salutation: "",
+                gender: parseInt(profile.gender) || 1,
+                nationalId: null,
+                VisaToken: null,
+                employerContactNumber: "",
+                contactNumber: contact,
+                dialCode: "02",
+                employerDialCode: "",
+                passportNumber: profile.passportNumber.toUpperCase(),
+                confirmPassportNumber: null,
+                passportExpirtyDate: formatDate(profile.passportExpiry),
+                dateOfBirth: formatDate(profile.dateOfBirth),
+                emailId: profile.email,
+                employerEmailId: "",
+                nationalityCode: "EGY",
+                state: null,
+                city: null,
+                isEndorsedChild: false,
+                applicantType: 0,
+                addressline1: null,
+                addressline2: null,
+                pincode: null,
+                referenceNumber: null,
+                vlnNumber: null,
+                applicantGroupId: 0,
+                parentPassportNumber: "",
+                parentPassportExpiry: "",
+                dateOfDeparture: null,
+                entryType: "",
+                eoiVisaType: "",
+                passportType: "",
+                vfsReferenceNumber: "",
+                familyReunificationCerificateNumber: "",
+                PVRequestRefNumber: "",
+                PVStatus: "",
+                PVStatusDescription: "",
+                PVCanAllowRetry: true,
+                PVisVerified: false,
+                eefRegistrationNumber: "",
+                helloVerifyNumber: "",
+                OfflineCClink: "",
+                idenfystatuscheck: false,
+                vafStatus: null,
+                SpecialAssistance: "",
+                AdditionalRefNo: null,
+                juridictionCode: "",
+                canInitiateVAF: false,
+                canEditVAF: false,
+                canDeleteVAF: false,
+                canDownloadVAF: false,
+                Retryleft: "",
+                ipAddress: config.ipAddress,
+                isAutoRefresh: true
+            }],
+            languageCode: "en-US",
+            isWaitlist: false,
+            juridictionCode: null,
+            regionCode: null
+        };
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/applicants", {
+            method: "POST",
+            headers: {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json;charset=UTF-8",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "origin": "https://visa.vfsglobal.com",
+                "referer": "https://visa.vfsglobal.com/",
+                "route": config.route,
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+            },
+            credentials: "include",
+            body: JSON.stringify(payload)
+        })
+        .then(r => {
+            log(`📥 Response status: ${r.status}`);
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+        })
+        .then(d => {
+            const urn = d.urn || (d.data && d.data.urn) || (d.applicantList && d.applicantList[0] && d.applicantList[0].urn);
+            if (urn) {
+                log(`✅ URN: ${urn}`);
+                return { success: true, urn };
+            }
+            throw new Error("No URN in response");
+        });
+    }
+
+    function checkFees(urn, email) {
+        const config = getCountryConfig();
+        log("💰 Checking fees...");
+        return fetch("https://lift-api.vfsglobal.com/appointment/fees", {
+            method: "POST",
+            headers: {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json;charset=UTF-8",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            credentials: "include",
+            body: JSON.stringify({
+                missionCode: config.missionCode,
+                countryCode: "egy",
+                centerCode: config.centerCode,
+                loginUser: email,
+                urn: urn,
+                languageCode: "en-US"
+            })
+        }).then(r => r.json()).then(() => log("✅ Fees OK"));
+    }
+
+    function getCalendar(urn, email, visaCategory) {
+        const config = getCountryConfig();
+        log("📅 Getting calendar...");
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/calendar", {
+            method: "POST",
+            headers: {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json;charset=UTF-8",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            credentials: "include",
+            body: JSON.stringify({
+                countryCode: "egy",
+                missionCode: config.missionCode,
+                centerCode: config.centerCode,
+                loginUser: email,
+                fromDate: "20/11/2025",
+                payCode: "",
+                urn: urn,
+                visaCategoryCode: visaCategory
+            })
+        })
+        .then(r => r.json())
+        .then(d => {
+            const dates = d.calendars
+                .filter(c => !c.isWeekend)
+                .map(c => {
+                    const dateStr = c.date;
+                    const parts = dateStr.split('/');
+                    if (parts.length !== 3) return dateStr;
+                    const [first, second, third] = parts;
+                    if (parseInt(first) > 12) return dateStr;
+                    if (parseInt(second) > 12) return `${second}/${first}/${third}`;
+                    return `${second}/${first}/${third}`;
+                })
+                .sort();
+
+            if (dates.length) {
+                log(`✅ Found ${dates.length} available dates`);
+                return { dates, visaCategory };
+            }
+            throw new Error("NO_DATES_FOUND");
+        });
+    }
+
+    function getSlot(urn, date, email, visaCategory, slotStrategy) {
+        const config = getCountryConfig();
+        log(`⏰ Getting slots for ${date}...`);
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/timeslot", {
+            method: "POST",
+            headers: {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json;charset=UTF-8",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            credentials: "include",
+            body: JSON.stringify({
+                countryCode: "egy",
+                missionCode: config.missionCode,
+                centerCode: config.centerCode,
+                loginUser: email,
+                slotDate: date,
+                urn: urn,
+                visaCategoryCode: visaCategory
+            })
+        })
+        .then(r => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+        })
+        .then(d => {
+            if (!d || !d.slots || d.slots.length === 0) {
+                throw new Error("NO_SLOTS_FOUND");
+            }
+            const selectedSlot = selectSlot(d.slots, slotStrategy);
+            log(`✅ Selected slot: ${selectedSlot.slot}`);
+            return { slot: selectedSlot, id: selectedSlot.allocationId, date };
+        });
+    }
+
+    function mapVas(urn, email) {
+        const config = getCountryConfig();
+        log("🔧 Mapping VAS...");
+        return fetch("https://lift-api.vfsglobal.com/vas/mapvas", {
+            method: "POST",
+            headers: {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json;charset=UTF-8",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            credentials: "include",
+            body: JSON.stringify({
+                loginuser: email,
+                missioncode: config.missionCode,
+                countrycode: "egy",
+                urn: urn,
+                applicants: []
+            })
+        }).then(r => r.json()).then(() => log("✅ VAS OK"));
+    }
+
+    function schedule(urn, allocId, email) {
+        const config = getCountryConfig();
+        log("📅 Scheduling appointment...");
+
+        return fetch("https://lift-api.vfsglobal.com/appointment/schedule", {
+            method: "POST",
+            headers: {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json;charset=UTF-8",
+                "authorize": capturedData.authorize,
+                "clientsource": capturedData.clientsource,
+                "route": config.route
+            },
+            credentials: "include",
+            body: JSON.stringify({
+                missionCode: config.missionCode,
+                countryCode: "egy",
+                centerCode: config.centerCode,
+                loginUser: email,
+                urn: urn,
+                aurn: null,
+                notificationType: "none",
+                paymentdetails: {
+                    paymentmode: "Online",
+                    RequestRefNo: "",
+                    clientId: "",
+                    merchantId: "",
+                    amount: config.fees,
+                    currency: "EGP"
+                },
+                allocationId: allocId,
+                CanVFSReachoutToApplicant: true,
+                TnCConsentAndAcceptance: true
+            })
+        })
+        .then(r => r.json())
+        .then(d => {
+            log(`📥 Schedule response received`);
+            Storage.set('lastPaymentUrl', d.URL || 'None');
+            Storage.set('lastPaymentPayload', d.payLoad || 'None');
+
+            if (d.URL && d.payLoad) {
+                const paymentUrl = d.URL.includes("payLoad") ? d.URL : d.URL + "?payLoad=" + encodeURIComponent(d.payLoad);
+                log(`🚀 Redirecting to payment...`);
+                window.location.href = paymentUrl;
+            } else if (d.URL) {
+                window.location.href = d.URL;
+            } else {
+                const paymentUrl = `https://payments.vfsglobal.eg/PG-Component/Payment/PayRequest`;
+                log(`🚀 Redirecting to Egypt payment...`);
+                window.location.href = paymentUrl;
+            }
+        });
+    }
+
+    // Date selection
+    function selectDate(dates, strategy) {
+        if (dates.length === 0) throw new Error("NO_DATES_FOUND");
+
+        switch(strategy) {
+            case "first":
+                log(`📅 Selected FIRST date: ${dates[0]}`);
+                return dates[0];
+            case "middle":
+                const midIndex = Math.floor(dates.length / 2);
+                log(`📅 Selected MIDDLE date: ${dates[midIndex]}`);
+                return dates[midIndex];
+            case "latest":
+                log(`📅 Selected LATEST date: ${dates[dates.length - 1]}`);
+                return dates[dates.length - 1];
+            case "random":
+            default:
+                const randomDate = dates[Math.floor(Math.random() * dates.length)];
+                log(`🎲 Selected RANDOM date: ${randomDate}`);
+                return randomDate;
+        }
+    }
+
+    // Slot selection
+    function selectSlot(slots, strategy) {
+        if (slots.length === 0) throw new Error("NO_SLOTS_FOUND");
+
+        switch(strategy) {
+            case "first":
+                return slots[0];
+            case "middle":
+                return slots[Math.floor(slots.length / 2)];
+            case "latest":
+                return slots[slots.length - 1];
+            case "random":
+            default:
+                return slots[Math.floor(Math.random() * slots.length)];
+        }
+    }
+
+    // Main booking with retry
+    function startBooking() {
+        if (!profileSelect.value) {
+            log("❌ Select a profile first");
+            return;
+        }
+        if (!capturedData.authorize || !capturedData.clientsource) {
+            log("❌ Tokens missing - browse site first");
+            return;
+        }
+
+        const config = getCountryConfig();
+        mainStatus.textContent = "🔄 Running...";
+        log(`🚀 Starting booking for ${config.name}...`);
+
+        const profile = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            contactNumber: document.getElementById('contactNumber').value,
+            passportNumber: document.getElementById('passportNumber').value,
+            dateOfBirth: document.getElementById('dateOfBirth').value,
+            passportExpiry: document.getElementById('passportExpiry').value,
+            gender: document.getElementById('gender').value,
+            visaCategory: document.getElementById('visaCategory').value
+        };
+
+        const dateStrategy = dateStrategySelect.value;
+        const slotStrategy = slotStrategySelect.value;
+
+        let urn, allocId;
+
+        // Step 1: Create applicant and get URN
+        sendApplicant(profile)
+        .then(r => {
+            urn = r.urn;
+            return checkFees(urn, profile.email);
+        })
+        .then(() => {
+            // Step 2: Start retry loop
+            return attemptBooking();
+        })
+        .then(() => {
+            mainStatus.textContent = "✅ Complete!";
+            log("🎉 BOOKING COMPLETE!");
+        })
+        .catch(err => {
+            mainStatus.textContent = "❌ Stopped";
+            if (err.message === "NO_DATES_FOUND") {
+                log("❌ NO DATES AVAILABLE - Stopped");
+            } else {
+                log(`❌ Error: ${err.message}`);
+            }
+        });
+
+        // Retry function - loops until dates run out
+        function attemptBooking() {
+            return getCalendar(urn, profile.email, profile.visaCategory)
+            .then(cal => {
+                const selectedDate = selectDate(cal.dates, dateStrategy);
+                return getSlot(urn, selectedDate, profile.email, cal.visaCategory, slotStrategy);
+            })
+            .then(slot => {
+                allocId = slot.id;
+                return mapVas(urn, profile.email);
+            })
+            .then(() => checkFees(urn, profile.email))
+            .then(() => schedule(urn, allocId, profile.email))
+            .catch(err => {
+                // If schedule fails (slot taken), retry with new date
+                if (err.message.includes("NO_SLOTS") || err.message.includes("slot")) {
+                    log("⚠️ Slot taken - Retrying with new date...");
+                    return attemptBooking(); // Recursive retry
+                }
+                // If no dates found, stop
+                if (err.message === "NO_DATES_FOUND") {
+                    throw new Error("NO_DATES_FOUND");
+                }
+                // Other errors - retry
+                log(`⚠️ ${err.message} - Retrying...`);
+                return attemptBooking();
+            });
+        }
+    }
+
+    // Event listeners
+    minimizeBtn.onclick = () => {
+        panel.style.display = 'none';
+    };
+
+    toggleBtn.onclick = () => {
+        panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    };
+
+    countrySelect.addEventListener('change', function() {
+        Storage.set("selectedCountry", this.value);
+        updateCountryInfo();
+    });
+
+    visaCategorySelect.addEventListener('change', function() {
+        Storage.set(`visaCategory_${countrySelect.value}`, this.value);
+        log(`✅ Visa category set to: ${this.value}`);
+    });
+
+    dateStrategySelect.addEventListener('change', function() {
+        Storage.set("dateStrategy", this.value);
+        log(`✅ Date strategy set to: ${this.value}`);
+    });
+
+    slotStrategySelect.addEventListener('change', function() {
+        Storage.set("slotStrategy", this.value);
+        log(`✅ Slot strategy set to: ${this.value}`);
+    });
+
+    profileSelect.onchange = loadProfile;
+    document.getElementById('saveProfile').onclick = saveProfile;
+    document.getElementById('startBtn').onclick = startBooking;
+
+    document.getElementById('clearBtn').onclick = () => {
+        Storage.set('profiles', '{}');
+        loadProfiles();
+        logArea.innerHTML = '';
+        log("🗑️ Data cleared");
+    };
+
+    // Init
+    updateUI();
+    loadProfiles();
+    updateCountryInfo();
+log("✅ VFS Multi-Country Bot loaded!");
+    log("🇳🇱 Netherlands & 🇵🇹 Portugal ready!");
+    log("💡 Auto-retry enabled - will loop until dates run out!");
+
+console.log('✅ VFS Bot fully initialized!');
