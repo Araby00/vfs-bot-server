@@ -9,6 +9,9 @@
   "routes": [
     {
       "src": "/bot.enc",
+      "headers": {
+        "Content-Type": "text/plain"
+      },
       "dest": "/bot.enc"
     },
     {
