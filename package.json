@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "main": "api/index.js",
+  "scripts": {
+    "dev": "node api/index.js",
+    "start": "node api/index.js"
+  },
   "dependencies": {
     "pg": "^8.11.3"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
