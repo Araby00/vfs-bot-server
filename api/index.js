@@ -1,13 +1,5 @@
 import pkg from 'pg';
-import { readFileSync } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-
 const { Pool } = pkg;
-
-// Get current directory
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const pool = new Pool({
   connectionString: process.env.POSTGRES_URL,
@@ -84,35 +76,6 @@ async function checkLicense(key, country, deviceId) {
 }
 
 export default async function handler(req, res) {
-  // ⭐⭐⭐ SERVE BOT.ENC FILE FIRST ⭐⭐⭐
-  if (req.url === '/public/bot.enc' || req.url === '/bot.enc') {
-    try {
-      // Try public folder first
-      let botPath = join(__dirname, '../public/bot.enc');
-      let botEnc;
-      
-      try {
-        botEnc = readFileSync(botPath, 'utf8');
-      } catch {
-        // If not in public, try root
-        botPath = join(__dirname, '../bot.enc');
-        botEnc = readFileSync(botPath, 'utf8');
-      }
-      
-      res.setHeader('Content-Type', 'text/plain');
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      console.log('[BOT.ENC] File served successfully');
-      return res.status(200).send(botEnc);
-    } catch (error) {
-      console.error('[BOT.ENC ERROR]', error);
-      return res.status(404).json({ 
-        error: 'bot.enc not found', 
-        details: error.message 
-      });
-    }
-  }
-
-  // REST OF YOUR CODE (CORS + LICENSE VALIDATION)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
