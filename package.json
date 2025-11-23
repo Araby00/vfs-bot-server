@@ -1,9 +1,8 @@
 {
-  "name": "vfs-bot-server",
+  "name": "vfs-bot-encryption",
   "version": "1.0.0",
   "type": "module",
-  "main": "api/index.js",
   "dependencies": {
-    "pg": "^8.11.3"
+    "crypto-js": "^4.2.0"
   }
 }
