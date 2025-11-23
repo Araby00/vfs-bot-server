@@ -8,15 +8,11 @@
   ],
   "routes": [
     {
-      "src": "/bot.enc",
-      "headers": {
-        "Content-Type": "text/plain"
-      },
-      "dest": "/bot.enc"
-    },
-    {
       "src": "/(.*)",
       "dest": "/api/index.js"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
