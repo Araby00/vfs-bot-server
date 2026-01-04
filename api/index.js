@@ -149,6 +149,39 @@ export default async function handler(req, res) {
     }
   }
 
+  // NEW: Extend/Update Expiration Date
+  if (action === 'extendExpiry') {
+    if (adminPassword !== ADMIN_PASSWORD) {
+      return res.status(403).json({ success: false, error: 'Invalid admin password' });
+    }
+    
+    const { newExpires } = body;
+    
+    if (!newExpires) {
+      return res.status(400).json({ success: false, error: 'New expiration date is required' });
+    }
+    
+    try {
+      const result = await pool.query(
+        'UPDATE vfs_licenses SET expires = $1 WHERE license_key = $2 RETURNING *',
+        [newExpires, licenseKey]
+      );
+      
+      if (result.rows.length === 0) {
+        return res.status(404).json({ success: false, error: 'License key not found' });
+      }
+      
+      console.log(`[ADMIN] 📅 EXTENDED: ${licenseKey} → New expiry: ${newExpires}`);
+      return res.json({ 
+        success: true, 
+        message: `License ${licenseKey} expiration updated to ${newExpires}`,
+        newExpires: newExpires
+      });
+    } catch (error) {
+      return res.status(500).json({ success: false, error: 'Database error: ' + error.message });
+    }
+  }
+
   if (action === 'addLicense') {
     if (adminPassword !== ADMIN_PASSWORD) {
       return res.status(403).json({ success: false, error: 'Invalid admin password' });
