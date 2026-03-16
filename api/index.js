@@ -6,7 +6,10 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "VFSAdmin2025!Secret";
+// Keep DB connection warm to avoid cold start delays
+pool.query('SELECT 1').catch(() => {});
+
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "ARABY";
 
 async function checkLicense(key, country, deviceId) {
   try {
