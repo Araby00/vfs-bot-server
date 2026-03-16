@@ -84,8 +84,23 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
-  const body = req.body || {};
+  // ✅ FIX: Safely parse body regardless of how it arrives
+  let body = req.body;
+  if (!body || typeof body === 'string') {
+    try {
+      body = JSON.parse(body || '{}');
+    } catch {
+      body = {};
+    }
+  }
+  if (typeof body !== 'object' || body === null) {
+    body = {};
+  }
+
   const { action, licenseKey, country, adminPassword, deviceId } = body;
+
+  // ✅ Debug log — helps catch future issues in Vercel logs
+  console.log(`[REQUEST] action=${action} | key=${licenseKey} | country=${country} | device=${deviceId}`);
 
   if (action === 'validate') {
     console.log(`[VALIDATE] License: ${licenseKey}, Country: ${country}, Device: ${deviceId}`);
@@ -149,7 +164,6 @@ export default async function handler(req, res) {
     }
   }
 
-  // NEW: Extend/Update Expiration Date
   if (action === 'extendExpiry') {
     if (adminPassword !== ADMIN_PASSWORD) {
       return res.status(403).json({ success: false, error: 'Invalid admin password' });
